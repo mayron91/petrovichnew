@@ -1,12 +1,33 @@
 <header class="header">
     <div class="container">
-        <a href="/" class="logo">
-            <img src="img/logo.svg" alt="" class="logo__img">
-        </a>
-
-        <div class="header__contacts">
-            <a href="tel:{{ vars.phone | toTel }}" class="phone">{{ vars.phone }}</a> <br>
-            <a href="tel:" class="phone">{{ vars.email }}</a>
-        </div>
+    <div class="burger-menu">
+        <button class="burger-btn">☰</button>
     </div>
+    
+    <div class="logo">
+        <a href="/"><img src="img/logo.svg" alt="Логотип"></a>
+    </div>
+    
+    <a href="tel:+71234567890" class="phone"><img src="img/phone_header_mob.svg" alt=""></a>
+</div>
 </header>
+
+<div class="menu">
+    <ul>
+        <li><div class="close-menu">✕</div></li>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li class="dropdown">
+            <div class="dropdown-toggle">Продукция</div>
+            <ul class="dropdown-content">
+                <li><a href="#">Категория 1</a></li>
+                <li><a href="#">Категория 2</a></li>
+                <li><a href="#">Категория 3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Контакты</a></li>
+    </ul>
+</div>
+
+<div class="overlay"></div>
