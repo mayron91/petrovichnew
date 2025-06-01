@@ -26,15 +26,15 @@ header .container {
 .burger-btn {
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 28PX;
     cursor: pointer;
-    margin-right: 20px;
-
+    margin-right: 20PX;
+    margin-left: 18PX;
 }
 
 .logo {
     position: absolute;
-    left: 50%;
+    left: 45%;
     transform: translateX(-50%);
     
 }
@@ -49,19 +49,18 @@ header .container {
     height: 30PX;
     position: absolute;
     right: 0;
+    margin-right: 30PX;
 }
 
 /* Стили для меню */
 .menu {
     position: fixed;
-    top: 80px;
+    top: 50PX;
     left: -100%;
-    width: 300px;
-    height: calc(100vh - 80px);
-    background-color: #fff;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 50PX);
     transition: left 0.3s ease;
     z-index: 999;
+    overflow-y: auto; 
 }
 
 .menu.active {
@@ -70,18 +69,32 @@ header .container {
 
 .menu ul {
     list-style: none;
-    padding: 20px 0;
+    margin-left: 20PX;
+    padding-left: 0;
 }
-
+.menu li:first-child {
+    align-items: flex-end;
+    padding-right: 20PX;
+}
 .menu li {
-    padding: 12px 20px;
-    border-bottom: 1px solid #eee;
+    width: 260PX;
+    min-height: 40PX;
+    background-color: $base-color;
+    margin: 2PX 0;
+    border-radius: 4PX;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .menu a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     display: block;
+    padding-left: 24PX;
+    font-weight: 500 !important;
 }
 
 .dropdown-content {
@@ -89,50 +102,68 @@ header .container {
     overflow: hidden;
     transition: max-height 0.3s ease;
     background-color: #f9f9f9;
+    border-radius: 4PX;
+    padding-left: 0;
+    width: 100%;
+    margin-left: 0 !important;
 }
 
 .dropdown-content.active {
-    max-height: 200px;
+    max-height: 100%; 
+    
+    padding-left: 0;
+    width: 100%;
 }
-
+.dropdown-content li:first-child {
+    align-items: flex-start;
+    padding-right: 0;
+}
 .dropdown-content li {
-    padding-left: 30px;
+    padding-top: 10PX;
+    padding-bottom: 10PX;
+    background: #fff;
+    border-radius: 4PX;
+    margin: 2PX 0;
+    width: 100%;
 }
-
+.dropdown-content li a {
+    color: $base-color;
+    font-size: 12PX;
+}
 .dropdown-toggle {
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    padding: 10PX 0;
+    padding-left: 24PX;
 }
 
 .dropdown-toggle::after {
-    content: "▼";
-    font-size: 12px;
+    content: url('/img/shevron.svg');
+    font-size: 18PX;
     transition: transform 0.3s;
+    margin-left: 10PX;
 }
 
 .dropdown-toggle.active::after {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
 }
 
 /* Крестик закрытия */
 .close-menu {
     display: flex;
     justify-content: flex-end;
-    padding: 15px 20px;
-    font-size: 24px;
+    font-size: 16PX;
     cursor: pointer;
-    border-bottom: 1px solid #eee;
 }
 
 /* Затемнение фона */
 .overlay {
     position: fixed;
-    top: 80px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
@@ -143,4 +174,27 @@ header .container {
 .overlay.active {
     opacity: 1;
     visibility: visible;
+}
+.header_mob_tel {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 10PX 0;
+}
+
+.header_mob_tel img {
+    width: 16PX;
+    height: 16PX;
+    margin-left: 24PX;
+}
+.header_mob_tel_wr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10PX;
+}
+.phone_header {
+    width: 140PX;
+    padding-left: 0 !important;
 }

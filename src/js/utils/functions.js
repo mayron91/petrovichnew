@@ -31,8 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function closeMenu() {
         menu.classList.remove('active');
         overlay.classList.remove('active');
-        dropdownContent.classList.remove('active');
-        dropdownToggle.classList.remove('active');
+        // Добавляем небольшую задержку перед закрытием dropdown для анимации
+        setTimeout(() => {
+            dropdownContent.classList.remove('active');
+            dropdownToggle.classList.remove('active');
+        }, 10);
     }
     
     // Закрытие по крестику
