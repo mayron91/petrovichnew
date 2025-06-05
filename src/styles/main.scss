@@ -17,6 +17,8 @@ $base-transition: all 230ms ease;
     outline: none;
 }
 $base-color: #1B2A55;
+$dark_blue: #34517F;
+
 html, body {
     font-family: $font-family;
     color: $font-color;
@@ -34,11 +36,20 @@ html, body {
         font-size: 34PX;
     }
 }
-
+ body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+            margin: 0;
+        }
+.main {
+            flex: 1; 
+        }
 .site-wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    flex: 1;
 }
 
 
@@ -75,3 +86,6 @@ html, body {
 //      S E C T I O N S
 // ------------------------------------
 
+.for_me {
+    height: 100vh;
+}
