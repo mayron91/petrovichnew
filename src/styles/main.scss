@@ -81,11 +81,85 @@ html, body {
         width: 100%;
     }
 }
-
+.btn:hover {
+    cursor: pointer;
+}
 // ------------------------------------
 //      S E C T I O N S
 // ------------------------------------
 
-.for_me {
-    height: 100vh;
+/*banner*/
+
+.banner {
+    width: 100%;
+background: url('../img/main/banner.jpg') no-repeat;
+background-size: cover;
+aspect-ratio: 16 / 9.6;
+margin-top: 64PX;
+}
+.banner_wr {
+    color: #fff;
+    width: 100%;
+}
+.banner_position {
+    position: relative;
+    width: 260PX;
+    margin: 0 auto;
+    padding-top: 25PX;
+}
+.banner_wr h1 {
+    font-size: 26PX;
+    font-weight: 700;
+    width: 260PX;
+    position: absolute;
+    left: 25PX;
+}
+.banner_btn_wr {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 630%;
+    left: 25PX;
+}
+.banner_btn_write {
+    width: 100PX;
+    height: 24PX;
+    border-radius: 18PX;
+    background: transparent;
+    border: 1px solid #fff;
+    font-size: 10PX;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10PX;
+}
+.banner_btn_service {
+    width: 100PX;
+    height: 24PX;
+    border-radius: 18PX;
+    background: #fff;
+    border: 1px solid #fff;
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gradient-text {
+ font-size: 10PX;
+    
+      background-image: linear-gradient(to right, #1B2A55, #9C1F87);
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; 
+}
+.banner_addr_wr {
+    position: absolute;
+    
+    top: 150PX;
+}
+.banner_addr_wr p {
+font-size: 12PX;
+font-weight: medium;
 }
