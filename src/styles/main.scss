@@ -222,21 +222,33 @@ font-weight: medium;
     
     .popup-content {
         background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
+        border-radius: 10px;
         max-width: 600px;
         width: 90%;
         position: relative;
     }
-    
+     .popup-content p {
+        padding: 10PX;
+     }
     .close-btn {
         position: absolute;
         top: 10px;
         right: 15px;
         font-size: 24px;
         cursor: pointer;
+        color: #fff;
     }
-
+#popupTitle {
+    background: $base-color;
+    margin: 0;
+    padding: 30PX 10PX 10PX 10PX;
+    width: 100%;
+    border-radius: 8PX 8PX 0 0;
+    font-size: 18PX;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 .services_wr {
     display: flex;
     flex-direction: row;
