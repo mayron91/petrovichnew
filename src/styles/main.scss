@@ -52,7 +52,9 @@ html, body {
     min-height: 100vh;
     flex: 1;
 }
-
+a {
+    text-decoration: none;
+}
 
 .container {
     width: 100%;
@@ -190,4 +192,225 @@ font-weight: medium;
     width: 16PX;
     height: 16PX;
     margin-right: 15PX;
+}
+
+
+/*services*/
+.services h2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 24PX;
+    font-weight: 600;
+    margin: 50PX 0 20PX 10PX;
+}
+/* Стили для поп-апа */
+   .popup-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .popup-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 600px;
+        width: 90%;
+        position: relative;
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+.services_wr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.service_card_wr {
+    width: 50%;
+    min-width: 150PX;
+    width: 150PX;
+    height: 170PX;
+    border-radius: 8PX;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10PX;
+    margin-bottom: 20PX;
+}
+.service_card_wr:nth-child(2n) {
+    margin-left: 20PX;
+}
+.service_card_bot {
+    background-color: #fff;
+    border-radius: 0 0 8PX 8PX;
+    height: 44PX;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.service_link {
+color: #fff;
+    font-size: 14PX;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.service_link img {
+    width: 14PX;
+    height: 10PX;
+    margin: 25PX 10PX 0 10PX;
+}
+.service_link_text {
+    padding: 18PX 0 0 10PX;
+}
+.service_icon {
+    width: 36PX;
+    margin: 0 0 10PX 10PX;
+}
+.service_card_back {
+    height: 126PX;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.service_btn {
+    width: 100PX;
+    height: 24PX;
+    color: #fff;
+    background: linear-gradient(to right, #1B2A55, #9C1F87);
+    border-radius: 16PX;
+    font-size: 12PX;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.service_card_wr:nth-child(1) {
+    background: url('../img/main/service1.jpg') no-repeat;
+     background-position: center;  
+}
+.service_card_wr:nth-child(2) {
+    background: url('../img/main/service2.jpg') no-repeat;
+    background-position: center;
+}
+.service_card_wr:nth-child(3) {
+    background: url('../img/main/service3.jpg') no-repeat;
+    background-position: center;
+}
+.service_card_wr:nth-child(4) {
+    background: url('../img/main/service4.jpg') no-repeat;
+    background-position: center;
+
+}
+.service_card_wr:nth-child(5) {
+    background: url('../img/main/service5.jpg') no-repeat;
+    background-position: center;
+  
+}
+.service_card_wr:nth-child(6) {
+    background: url('../img/main/service6.jpg') no-repeat;
+    background-position: center;
+ 
+}
+.service_card_wr:nth-child(7) {
+    background: url('../img/main/service7.jpg') no-repeat;
+    background-position: center;
+  
+}
+.service_card_wr:nth-child(8) {
+    background: url('../img/main/service8.jpg') no-repeat;
+    background-position: center;
+   ;
+}
+.service_card_wr:nth-child(9) {
+    background: url('../img/main/service9.jpg') no-repeat;
+    background-position: center;
+
+}
+.service_card_wr:nth-child(10) {
+    background: url('../img/main/service10.jpg') no-repeat;
+    background-position: center;
+   
+}
+.service_card_wr:nth-child(11) {
+    background: url('../img/main/service11.jpg') no-repeat;
+    background-position: center;
+
+}
+.service_card_wr:nth-child(12) {
+    background: url('../img/main/service12.jpg') no-repeat;
+    background-position: center;
+  
+}
+.service_card_wr:nth-child(13) {
+    background: url('../img/main/service13.jpg') no-repeat;
+    background-position: center;
+  
+}
+.service_card_wr:nth-child(14) {
+    background: url('../img/main/service14.jpg') no-repeat;
+    background-position: center;
+   
+}
+.service_card_wr:nth-child(15) {
+    background: url('../img/main/service15.jpg') no-repeat;
+    background-position: center;
+ 
+}
+.service_card_wr:nth-child(16) {
+    background: url('../img/main/service16.jpg') no-repeat;
+    background-position: center;
+  
+}
+.service_card_wr:nth-child(17) {
+    background: url('../img/main/service17.jpg') no-repeat;
+    background-position: center;
+   
+}
+.service_card_wr:nth-child(18) {
+    background: url('../img/main/service18.jpg') no-repeat;
+    background-position: center;
+   
+}
+.service_card_wr:nth-child(19) {
+    background: url('../img/main/service19.jpg') no-repeat;
+    background-position: center;
+   
+}
+.service_card_wr:nth-child(20) {
+    background: url('../img/main/service20.jpg') no-repeat;
+    background-position: center;
+ 
+}
+.service_card_wr:nth-child(21) {
+    background: url('../img/main/service21.jpg') no-repeat;
+    background-position: center;
+   
+}
+.service_card_wr:nth-child(22) {
+    background: url('../img/main/service22.jpg') no-repeat;
+    background-position: center;
+  
 }
