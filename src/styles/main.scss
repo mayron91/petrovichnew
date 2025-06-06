@@ -41,6 +41,7 @@ html, body {
             flex-direction: column;
             min-height: 100vh; 
             margin: 0;
+            background-color: $base-color;
         }
 .main {
             flex: 1; 
@@ -106,13 +107,14 @@ margin-top: 64PX;
     width: 260PX;
     margin: 0 auto;
     padding-top: 25PX;
+   
 }
 .banner_wr h1 {
     font-size: 26PX;
     font-weight: 700;
     width: 260PX;
     position: absolute;
-    left: 25PX;
+    left: 30PX;
 }
 .banner_btn_wr {
     display: flex;
@@ -155,11 +157,33 @@ margin-top: 64PX;
   -webkit-text-fill-color: transparent; 
 }
 .banner_addr_wr {
-    position: absolute;
-    
-    top: 150PX;
+    position: relative;
+    width: 100%;
+    color: #fff;
+    margin-top: 10PX;
+}
+.banner_addr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.banner_addr img {
+    width: 16PX;
+    height: 20PX;
+    margin-right: 15PX;
 }
 .banner_addr_wr p {
 font-size: 12PX;
 font-weight: medium;
+}
+.banner_time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -5PX;
+}
+.banner_time img {
+    width: 16PX;
+    height: 16PX;
+    margin-right: 15PX;
 }
