@@ -114,3 +114,38 @@ document.addEventListener('DOMContentLoaded', function() {
             closeServicePopup();
         }
     }
+
+
+   const swiper = new Swiper('.swiper-cert', {
+  slidesPerView: 1.5, // Показывать 1 целый + 0.5 следующего
+  spaceBetween: 20,   // Отступ между слайдами
+  centeredSlides: false, // Не центрировать слайды
+  initialSlide: 0,     // Начинать с первого слайда
+  freeMode: true,      // Плавная прокрутка без привязки
+  breakpoints: {
+    // Адаптация для разных экранов
+    768: {
+      slidesPerView: 2.5
+    },
+    1024: {
+      slidesPerView: 3.5
+    }
+  }
+});
+
+  const swiper2 = new Swiper('.swiper-news', {
+  slidesPerView: 1.5, // Показывать 1 целый + 0.5 следующего
+  spaceBetween: 20,   // Отступ между слайдами
+  centeredSlides: false, // Не центрировать слайды
+  initialSlide: 0,     // Начинать с первого слайда
+  freeMode: true,      // Плавная прокрутка без привязки
+  breakpoints: {
+    // Адаптация для разных экранов
+    768: {
+      slidesPerView: 2.5
+    },
+    1024: {
+      slidesPerView: 3.5
+    }
+  }
+});
