@@ -644,3 +644,190 @@ height: 155PX !important;
     font-size: 12PX;
     background: linear-gradient(90deg, #1B2A55 0%, #9C1F87 100%); border-radius: 12px; outline: 1px #fff solid; outline-offset: -1px;
 }
+/*video*/
+.video {
+    margin-top: 64PX;
+    color: #fff;
+}
+.video_wr {
+    width: 100%;
+    height: auto;
+    margin-bottom: 120PX;
+    background: linear-gradient(180deg, rgba(156, 31, 135, 0.60) 0%, #51256A 0%, #1B2A55 100%);
+}
+.video_wr h2 {
+    font-size: 18PX;
+    font-weight: 600;
+    padding: 35PX 0 0 20PX;
+}
+.video_wr h3 {
+    font-size: 14PX;
+    font-weight: 500;
+    padding: 10PX 0 0 20PX;
+}
+.video_container {
+    margin-top: 50PX;
+    padding: 0 40PX;
+}
+.video_wr p {
+    padding: 10PX 40PX;
+    line-height: auto;
+}
+/*advantages*/
+.advantages {
+    background-color: #fff;
+    padding-bottom: 70PX;
+}
+.advantages_wr {
+    display: flex;
+    flex-direction: column;
+    padding: 15PX 0 0 50PX;
+}
+.advantages_card h2 {
+    font-size: 50PX;
+    font-weight: 700;
+    color: $base-color;
+    margin-bottom: 10PX;
+}
+.advantages_card p {
+    font-size: 16PX;
+    font-weight: 500;
+    color: $base-color;
+    width: 200PX;
+    line-height: 28PX;
+}
+/*team*/
+.team {
+    color: #fff;
+}
+.founder_wr h2 {
+    font-size: 20PX;
+    font-weight: 600;
+    padding: 30PX 0 0 20PX;
+    margin-bottom: 5PX;
+}
+.founder_wr span {
+    font-size: 16PX;
+    padding-left: 20PX;
+}
+.founder_wr img {
+    border-radius: 8PX;
+    margin: 25PX 0 0 20PX;
+}
+.special_team {
+    font-size: 40PX;
+    font-weight: 700;
+    width: 100%;
+    text-align: right;
+    margin-top: -25PX;
+    padding-right: 10PX;
+}
+.founder_wr p {
+    font-size: 16PX;
+    font-weight: 500;
+    letter-spacing: auto;
+    padding: 5PX 20PX;
+}
+.our_team_wr h2 {
+    font-size: 24PX;
+    font-weight: 600;
+    margin-top: 80PX;
+    padding-left: 20PX;
+}
+.our_team_wr p {
+    font-size: 16PX;
+    font-weight: 500;
+    padding: 10PX 20PX;
+}
+.team_card_wr {
+    display: flex;
+    flex-direction: row;
+    gap: 20PX;
+    flex-wrap: wrap;
+}
+.team_card {
+    max-width: 50%;
+    width: 152PX;
+    border-radius: 8PX;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.team_card img {
+    width: 100%;
+    max-height: 155PX;
+    object-fit: cover;
+}
+.team_card h3 {
+    font-size: 12PX;
+    width: 90PX;
+    line-height: 14PX;
+    margin-top: 5PX;
+    padding: 0 10PX;
+    margin-bottom: 4PX;
+}
+.team_card span {
+    font-size: 8PX;
+    margin-left: 10PX;
+}
+.team_cont_wr {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.team_cont_link {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10PX;
+}
+.team_card:last-child .team_cont_link {
+    padding: 10PX;
+}
+.team_cont_link img {
+    width: 10PX;
+    object-fit: contain;
+}
+.team_cont_link a {
+    font-size: 9PX;
+    margin-left: 5PX;
+    font-weight: normal;
+    color: #fff;
+}
+.team_card:nth-child(1) .team_cont_wr{
+    background: url('../img/team/back1.jpg') no-repeat;
+}
+.team_card:nth-child(2) .team_cont_wr{
+    background: url('../img/team/back2.jpg') no-repeat;
+}
+.team_card:nth-child(3) .team_cont_wr{
+    background: url('../img/team/back3.jpg') no-repeat;
+}
+.team_card:nth-child(4) .team_cont_wr{
+    background: url('../img/team/back4.jpg') no-repeat;
+}
+.team_card:nth-child(5) .team_cont_wr{
+    background: url('../img/team/back5.jpg') no-repeat;
+}
+.team_card:nth-child(6) .team_cont_wr{
+    background: url('../img/team/back6.jpg') no-repeat;
+}
+.team_card:nth-child(7) .team_cont_wr{
+    background: url('../img/team/back7.jpg') no-repeat;
+}
+.team_card:nth-child(8) .team_cont_wr{
+    background: url('../img/team/back8.jpg') no-repeat;
+}
+.team_card:nth-child(9) .team_cont_wr{
+    background: url('../img/team/back9.jpg') no-repeat;
+}
+.team_card:nth-child(10) .team_cont_wr{
+    background: url('../img/team/back10.jpg') no-repeat;
+}
+.team_card:nth-child(11) .team_cont_wr{
+    background: url('../img/team/back11.jpg') no-repeat;
+}
+.team_card:nth-child(12) .team_cont_wr{
+    background: url('../img/team/back12.jpg') no-repeat;
+}
