@@ -669,6 +669,10 @@ height: 155PX !important;
     margin-top: 50PX;
     padding: 0 40PX;
 }
+.video_container iframe {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
 .video_wr p {
     padding: 10PX 40PX;
     line-height: auto;
@@ -838,4 +842,142 @@ height: 155PX !important;
 }
 .team_card:nth-child(12) .team_cont_wr{
     background: url('../img/team/back12.jpg') no-repeat;
+}
+/*partners*/
+.partners_banner_wr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 310PX;
+    opacity: 1;
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(0deg, rgba(156, 31, 135, 0.60) 0%, #51256A 0%, #1B2A55 100%);
+        padding-bottom: 55PX;
+}
+.partners_banner_back {
+    margin-top: 45PX;
+    width: 100%;
+    min-height: 134PX;
+    aspect-ratio: 16/9;
+    position: relative;
+    z-index: 1;
+    opacity: 0.6;
+    background: url('../img/partners/back.jpg') no-repeat;
+    background-position: center center;
+   background-size: contain;
+}
+.partners_banner_wr h1 {
+    max-width: 235PX;
+    font-size: 14PX;
+    font-weight: 500;
+    color: #fff;
+    margin: 0PX 0 0 50PX;
+}
+.prev {
+    background-color: #fff;
+}
+.prev_wr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35PX 0 0 0;
+}
+.prev_card_wr {
+    width: 240PX;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 60PX 95PX;
+}
+.prev_card_wr img {
+    width: 70PX;
+}
+.prev_card_wr span {
+    font-size: 16PX;
+    color: $base-color;
+    width: 190PX;
+    padding-top: 10PX;
+}
+.partners_call_form_wr .call_form_back {
+    margin-top: -144PX;
+    width: 175PX;
+    height: 295PX;
+    margin-left: -5PX;
+}
+.partners_call_form_wr .call_form_title_wr {
+    margin: 145PX 0 0 20PX;
+}
+.partners_call_form_wr .call_form_title_wr h3 {
+    font-size: 14PX;
+    font-weight: 600;
+    width: 275PX;
+}
+.partners_call_form_wr .feedback_form_main {
+    height: 510PX;
+    margin: -110PX 0 0 40PX;
+}
+.partners_call_form_wr .feedback-form_main {
+    padding: 20PX 0 0 0;
+}
+.partners_call_form_wr .form-group_main input {
+        width: 267PX;
+}
+.partners_call_form_wr .checkbox-label_main {
+    margin-top: 20PX;
+}
+.partners_call_form_wr .checkbox-label_main span {
+    font-size: 10PX;
+}
+.partners_call_form_wr .submit-button_main {
+    margin-top: 16PX;
+}
+.partners_file_text {
+    font-size: 10PX;
+    font-weight: 500;
+    color: #fff;
+    margin: 5PX 0 10PX -35PX;
+}
+.partners_special_text {
+    font-size: 8PX;
+    color: #fff;
+    padding: 40PX 0 0 0;
+    width: 90%;
+}
+.custom-file-upload {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    width: 267PX;
+    height: 46PX;
+    background: transparent;
+    border: 1PX solid #fff;
+    border-radius: 8PX;
+    color: #fff;
+    cursor: pointer;
+    
+}
+.custom-file-upload img {
+    margin-right: 10PX;
+}
+.custom-file-upload span {
+    font-size: 12PX;
+}
+.custom-file-upload:hover {
+    background: #0056b3;
+}
+
+/* Скрываем стандартный input */
+input[type="file"] {
+    display: none;
+}
+
+#file-name {
+    margin-left: 10px;
+    color: #666;
+    font-size: 14px;
 }
