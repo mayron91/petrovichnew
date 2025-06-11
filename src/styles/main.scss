@@ -901,6 +901,11 @@ height: 155PX !important;
     width: 190PX;
     padding-top: 10PX;
 }
+.partners_call_form_wr {
+        padding-bottom: 50PX;
+        max-width: 375PX;
+        margin: 0 auto;
+}
 .partners_call_form_wr .call_form_back {
     margin-top: -144PX;
     width: 175PX;
@@ -981,3 +986,226 @@ input[type="file"] {
     color: #666;
     font-size: 14px;
 }
+.partners_swiper {
+    padding-bottom: 100PX;
+}
+.partners_swiper_wr h2 {
+    font-size: 24PX;
+    font-weight: 600;
+    color: #fff;
+    margin: 30PX 0 0 30PX;
+    padding-bottom: 65PX;
+}
+.swiper-partners {
+    width: 100%;
+    background-color: #fff;
+}
+/*vacancy*/
+
+        .accordion {
+            margin: 25PX 0 0 -20PX;
+            min-width: 335PX;
+        }
+        .accordion-item {
+            border: 2PX solid #ddd;
+            margin-bottom: 5PX;
+            min-height: 50PX;
+        }
+        .accordion-header {
+            padding: 5PX;
+            background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .accordion-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content-inner {
+            padding: 15px;
+            background: #fff;
+            color: #000;
+            height: auto;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 3000PX; /* Достаточно большое значение для контента */
+        }
+        .accordion-arrow {
+            transition: transform 0.3s ease;
+            margin-left: 10PX;
+        }
+        .accordion-item.active .accordion-arrow {
+            transform: rotate(180deg);
+        }
+        .vacancy_accordeon {
+            min-height: 745PX;
+            background: linear-gradient(180deg, rgba(156, 31, 135, 0.60) 0%, #51256A 0%, #1B2A55 100%);
+        }
+        .vac_title {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+        }
+        .vacancy_accordeon_wr {
+            padding: 90px 0 0 20px;
+        }
+        .vacancy_accordeon_wr h2 {
+            color: #fff;
+            font-size: 14PX;
+        }
+        .vacancy_accordeon_wr h1 {
+            font-size: 24PX;
+            color: #fff;
+            font-weight: 600;
+            padding: 50PX 0 0 70PX;
+        }
+    .accordion-item {
+        color: #fff;
+    }
+    .vac_title span:nth-child(1) {
+        font-size: 16PX;
+    }
+      .vac_title span:nth-child(2) {
+        font-size: 10PX;
+      }
+      .vac_price {
+        width: 30%;
+        padding-top: 10PX;
+        font-size: 12PX;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .garant {
+        background-color: #fff;
+        padding-bottom: 15PX;
+      }
+      .garant_wr {
+        max-width: 375PX;
+        margin: 0 auto;
+      }
+      .garant_title {
+        color: #fff;
+        padding: 45PX 0 0 0;
+        font-size: 24PX;
+        font-weight: 600;
+      }
+      .garant_card_wr {
+        display: flex;
+        flex-direction: column;
+        max-width: 240PX;
+        padding: 30PX 0 0 40PX;
+      }
+      .garant_card {
+        display: flex;
+        flex-direction: column;
+      }
+      .garant_card img {
+        width: 75PX;
+      }
+      .garant_card span {
+        color: #313D57;
+        font-size: 20PX;
+        font-weight: 500;
+        padding: 5PX 0 30PX 0;
+      }
+      /*service*/
+      .dropdown_service {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-btn_service {
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: #fff;
+        }
+        .dropdown-btn_service img {
+            margin-right: 10PX;
+        }
+        
+        .dropdown-content_service {
+            display: none;
+            position: absolute;
+            right: 0;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 50;
+            
+            
+            list-style: none;
+           
+        }
+        
+        .dropdown-content_service a {
+            color: black;
+            padding: 10PX;
+            text-decoration: none;
+            display: block;
+            background-color: #fff;
+            border-radius: 4PX;
+            margin: 2PX;
+            min-width: 225PX;
+            font-size: 12PX;
+            font-weight: 600;
+            color: $base-color !important;
+        }
+        
+        .dropdown-content_service a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        /* Показываем выпадающее меню при наведении */
+        .dropdown_service:hover .dropdown-content_service {
+            display: block;
+        }
+        .service_block {
+            background: linear-gradient(180deg, rgba(156, 31, 135, 0.60) 0%, #401657 0%, #1B2A55 100%);
+        }
+        .service_block_wr {
+            padding-top: 80PX;
+        }
+        .breadcr_wr {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .breadcr_wr ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+            font-size: 10PX;
+            font-weight: 400;
+        }
+        .breadcr_wr a {
+            color: #fff;
+            margin-right: 10PX;
+        }
+        .service_content_wr {
+            color: #fff;
+            
+        }
+        .service_content_wr h1 {
+font-size: 24PX;
+            font-weight: 600;
+        }
+        .service_content_wr h2 {
+            font-size: 14PX;
+            font-weight: 500;
+        }
+        .service_content_wr p {
+            font-size: 14PX;
+        }
+        .service_content_wr li {
+            font-size: 14PX;
+        }

@@ -149,3 +149,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
+
+const swiper3 = new Swiper('.swiper-partners', {
+  slidesPerView: 1, // Показывать 1 целый + 0.5 следующего
+  spaceBetween: 20,   // Отступ между слайдами
+  centeredSlides: false, // Не центрировать слайды
+  initialSlide: 0,     // Начинать с первого слайда
+  freeMode: true,      // Плавная прокрутка без привязки
+  breakpoints: {
+    // Адаптация для разных экранов
+    768: {
+      slidesPerView: 2
+    },
+    1024: {
+      slidesPerView: 3
+    }
+  }
+});
+
+ document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                item.classList.toggle('active');
+            });
+        });
