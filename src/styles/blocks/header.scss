@@ -198,3 +198,17 @@ header .container {
     width: 140PX;
     padding-left: 0 !important;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+   .header {
+    display: none;
+   } 
+   .header_desk {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1024PX;
+    background: #fff;
+    height: 64PX;
+    position: fixed;
+   }
+}
