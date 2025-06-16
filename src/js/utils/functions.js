@@ -173,3 +173,135 @@ const swiper3 = new Swiper('.swiper-partners', {
                 item.classList.toggle('active');
             });
         });
+
+document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('feedbackForm_main');
+        const popup = document.getElementById('successPopup');
+        const closePopup = document.querySelector('.close-popup_success');
+        
+        // Закрытие pop-up
+        closePopup.addEventListener('click', function() {
+            popup.style.display = 'none';
+        });
+        
+        // Закрытие при клике вне pop-up
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+        
+        // Обработка отправки формы
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Здесь должна быть ваша логика валидации и отправки формы
+            // Для примера просто показываем pop-up
+            
+            // Сброс формы
+            form.reset();
+            
+            // Показываем pop-up
+            popup.style.display = 'flex';
+            
+            // Автоматическое закрытие через 5 секунд
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 5000);
+        });
+    });
+
+     document.addEventListener('DOMContentLoaded', function() {
+        // Находим все ссылки "Подробнее" в слайдах
+        const newsLinks = document.querySelectorAll('.news_link');
+        const newsPopup = document.getElementById('newsPopup');
+        const closePopup = document.querySelector('.close-news-popup');
+        
+        // Для каждой ссылки добавляем обработчик клика
+        newsLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Здесь можно добавить загрузку разного контента для разных новостей
+                // Сейчас просто показываем попап
+                
+                newsPopup.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
+            });
+        });
+        
+        // Закрытие попапа
+        closePopup.addEventListener('click', function() {
+            newsPopup.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Возвращаем скролл
+        });
+        
+        // Закрытие при клике вне попапа
+        newsPopup.addEventListener('click', function(e) {
+            if (e.target === newsPopup) {
+                newsPopup.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Обработчик для кнопки в попапе
+        const popupButton = document.querySelector('.news-popup-button');
+        if (popupButton) {
+            popupButton.addEventListener('click', function() {
+                // Здесь можно добавить переход к форме заявки
+                alert('Перенаправление на форму заявки');
+                newsPopup.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Находим кнопку "Записаться"
+        const appointmentBtn = document.querySelector('.banner_btn_write');
+        const appointmentPopup = document.getElementById('appointmentPopup');
+        const closePopup = document.querySelector('.close-appointment-popup');
+        const appointmentForm = document.getElementById('appointmentForm');
+        
+        // Обработчик клика по кнопке "Записаться"
+        if (appointmentBtn) {
+            appointmentBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                appointmentPopup.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        }
+        
+        // Закрытие попапа
+        closePopup.addEventListener('click', function() {
+            appointmentPopup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Закрытие при клике вне попапа
+        appointmentPopup.addEventListener('click', function(e) {
+            if (e.target === appointmentPopup) {
+                appointmentPopup.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Обработка отправки формы
+        if (appointmentForm) {
+            appointmentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Здесь должна быть логика отправки формы
+                // Например, AJAX-запрос на сервер
+                
+                // Для примера просто показываем сообщение
+                alert('Ваша заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+                
+                // Закрываем попап и сбрасываем форму
+                appointmentPopup.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                appointmentForm.reset();
+            });
+        }
+    });

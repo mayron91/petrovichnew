@@ -13,6 +13,36 @@
         
     </div>
 </section>
+<div id="appointmentPopup" class="appointment-popup-overlay">
+    <div class="appointment-popup-content">
+        <span class="close-appointment-popup">&times;</span>
+        <h3>Заявка на ремонт</h3>
+                <div id="feedbackForm_main" class="feedback-form_main">
+                    <div class="form-group_main">
+                        <input type="name" id="name_main" name="name" placeholder="ФИО контактного лица" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group_main">
+                        <input type="tel" id="phone_main" name="phone" placeholder="Телефон" required>
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    <div class="form-group_main">
+                        <input type="text" id="text" name="text" placeholder="Марка автомобиля" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group_main">
+                        <label class="checkbox-label_main">
+                            <input type="checkbox" id="agree_main" name="agree" required>
+                            <span>Соглашение с политикой конфиденциальности</span>
+                        </label>
+                        <span class="error-message_main" id="agreeError"></span>
+                    </div>
+                    <button type="submit" class="submit-button_main">Отправить</button>
+
+                    <div id="formMessage" class="form-message_main"></div>
+                </div>
+    </div>
+</div>
 <section class="after_banner">
     <div class="container">
         <div class="banner_addr_wr">
