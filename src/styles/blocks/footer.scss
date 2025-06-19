@@ -144,3 +144,37 @@ font-size: 16PX;
     font-size: 18PX;
     font-weight: normal;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+.footer_wr {
+    padding-left: 0;
+    max-width: 100%;
+}
+.footer_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 25PX;
+    justify-content: space-between;
+}
+.footer_link_wr {
+    margin-top: 30PX;
+}
+.footer_contacts_wr {
+ margin-top:30PX;
+}
+.feedback_form {
+    margin: 40PX 0 0 0;
+    width: auto;
+    min-width: auto;
+}
+.form-group {
+    max-width: 210PX;
+}
+#phone {
+    width: 208PX;
+}
+.submit-button {
+    width: 208PX;
+}
+}

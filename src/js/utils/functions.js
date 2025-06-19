@@ -305,3 +305,34 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+    window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header_desk');
+    if (window.scrollY > 10) { // Если прокрутили больше 10px
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+function truncateToFirstWord(element) {
+  const text = element.textContent.trim();
+  const firstWord = text.split(/\s+/)[0]; // Берём первое слово
+  element.textContent = firstWord;
+}
+
+function checkOverflowAndTruncate(block) {
+  // Проверяем, что экран меньше 768px И текст не помещается
+  if (window.innerWidth < 768 && block.scrollWidth > block.clientWidth) {
+    truncateToFirstWord(block);
+  }
+}
+
+// Пример использования
+const block = document.querySelector('.banner_btn_write');
+checkOverflowAndTruncate(block);
+
+// Добавляем обработчик ресайза (если нужно динамически проверять)
+window.addEventListener('resize', () => {
+  checkOverflowAndTruncate(block);
+});

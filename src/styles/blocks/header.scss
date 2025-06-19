@@ -198,17 +198,159 @@ header .container {
     width: 140PX;
     padding-left: 0 !important;
 }
+.menu_desk {
+    display: none;
+}
 @media (min-width: 768px) and (max-width: 1024px) {
    .header {
     display: none;
    } 
-   .header_desk {
+  
+.header_desk {
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-width: 1024PX;
+    margin: 10px auto 0 auto;
+    max-width: 1024px;
     background: #fff;
-    height: 64PX;
+    height: 60px;
     position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+    transition: all 0.3s ease; /* Добавляем плавный переход */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header_desk.scrolled {
+    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Добавляем тень при скролле */
+}
+
+   .logo {
+    position: relative;
+    left: 0;
+    transform: none;
+    
+    margin-left: 50PX;
    }
+   .logo img {
+    width: 220PX;
+    height: 44PX;
+   }
+
+.menu_desk {
+    position: relative;
+    display: flex;
+    margin-left: 80PX;
+}
+
+.menu_desk > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu_desk > ul > li {
+    position: relative;
+    margin-right: 10PX;
+}
+
+.menu_desk a {
+    text-decoration: none;
+    color: $base-color;
+    padding: 10PX 0;
+    display: block;
+    transition: color 0.3s;
+    font-size: 14PX;
+    font-weight: 600;
+}
+
+.menu_desk a:hover {
+    color: #0066cc;
+}
+
+.dropdown_desk {
+    position: relative;
+}
+
+.dropdown-toggle_desk {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: $base-color;
+    font-size: 14PX;
+    font-weight: 600;
+}
+.dropdown-toggle_desk img {
+    margin-left: 10PX;
+}
+.dropdown-toggle_desk:hover {
+    color: #0066cc;
+}
+
+.dropdown-content_desk {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    margin-top: 15PX;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    max-height: auto;
+    overflow-y: auto;
+    padding-left: 0;
+    display: block;
+}
+
+.dropdown_desk:hover .dropdown-content_desk {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Стили для вертикального меню */
+.dropdown-content_desk {
+    display: block;
+}
+
+.dropdown-content_desk li {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    border-radius: 4PX;
+    background-color: #fff;
+    margin: 0 0 2PX 0;
+}
+
+.dropdown-content_desk li a {
+    padding: 8px 15px;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+    display: block;
+}
+
+.dropdown-content_desk li:last-child a {
+    border-bottom: none;
+}
+.phone_desk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14PX;
+    font-weight: 600;
+    color: $base-color;
+    margin-right: 50PX;
+}
+.phone_desk img {
+    margin-left: 24PX;
+}
 }
