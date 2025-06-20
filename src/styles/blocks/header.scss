@@ -294,10 +294,12 @@ header .container {
 
 .dropdown-content_desk {
     position: absolute;
+    /* Заменяем height: 100vh на max-height с расчетом */
+    max-height: calc(100vh - 90PX); /* 40px - отступ от верха экрана */
     top: 100%;
     left: 0;
     width: 250px;
-    margin-top: 15PX;
+    margin-top: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     border-radius: 4px;
     opacity: 0;
@@ -305,10 +307,27 @@ header .container {
     transform: translateY(10px);
     transition: all 0.3s ease;
     z-index: 1000;
-    max-height: auto;
-    overflow-y: auto;
     padding-left: 0;
     display: block;
+    /* Добавляем прокрутку */
+    overflow-y: auto; /* Вертикальная прокрутка при необходимости */
+    overflow-x: hidden; /* Горизонтальная прокрутка скрыта */
+    /* Стиль скроллбара (опционально) */
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f5f5f5;
+}
+
+/* Стилизация скроллбара для WebKit */
+.dropdown-content_desk::-webkit-scrollbar {
+    width: 6px;
+}
+.dropdown-content_desk::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 3px;
+}
+.dropdown-content_desk::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
 }
 
 .dropdown_desk:hover .dropdown-content_desk {
@@ -325,6 +344,7 @@ header .container {
 .dropdown-content_desk li {
     display: block;
     width: 100%;
+    height: auto;
     max-width: 260px;
     border-radius: 4PX;
     background-color: #fff;
@@ -334,7 +354,6 @@ header .container {
 .dropdown-content_desk li a {
     padding: 8px 15px;
     border-bottom: 1px solid #eee;
-    white-space: nowrap;
     display: block;
 }
 
