@@ -574,14 +574,19 @@ background-size: cover;
 }
 .service_icon {
     width: 80PX;
-    margin-top: 50PX;
+    max-height: 80PX;
+    margin-top: 40PX;
+    object-fit: contain;
+}
+.services_wr .service_card_wr:last-child .service_icon {
+    margin-top: 10PX;
 }
 .service_link {
     justify-content: flex-end;
 }
 .service_link_text {
     font-size: 16PX;
-    max-width: 140PX;
+    max-width: 150PX;
     padding-right: 20PX;
     padding-top: 20PX;
 }
@@ -777,6 +782,57 @@ display: flex;
     .popup-content_success p {
         margin-bottom: 0;
     }
+@media (min-width: 768px) and (max-width: 1024px) {
+    .call_form {
+        max-width: 660PX;
+        margin-top: 310PX;
+        margin-bottom: 140PX;
+    }
+    .call_form_back {
+        width: 322PX;
+        height: 538PX;
+        margin-top: -400PX;
+    margin-left: 341PX;
+    }
+    .call_form_title_wr h2 {
+        font-size: 46PX;
+        letter-spacing: normal;
+        margin-bottom: 15PX;
+    }
+    .call_form_title_wr h3 {
+        font-size: 36PX;
+        letter-spacing: normal;
+    }
+    .call_form_title_wr {
+        width: 656PX;
+        margin-top: 110PX;
+    padding-left: 0PX;
+    }
+    .feedback_form_main {
+        width: 433PX;
+        height: 608PX;
+        margin: -100PX 0 0 0PX;
+    }
+    .feedback_form_main h3 {
+        font-size: 24PX;
+        padding-top: 95PX;
+    padding-left: 42PX;
+    }
+    .form-group_main input {
+        width: 360PX;
+        height: 60PX;
+        margin-bottom: 25PX;
+    }
+    .submit-button_main {
+        width: 360PX;
+        height: 60PX;
+        margin-top: 15PX;
+    }
+    .checkbox-label_main span {
+    
+    width: 330PX;
+}
+}
 /*swiper-cert*/
 .swiper_cert {
 height: 440PX;
@@ -814,6 +870,55 @@ background: linear-gradient(180deg, rgba(110.50, 45.30, 99.55, 0.60) 0%, #51256A
 }
 .swiper-cert .swiper-slide:first-child {
   margin-left: 10PX;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .swiper_cert {
+        height: 680PX;
+    }
+    .swiper_cert h2 {
+        font-size: 36PX;
+                position: absolute;
+        margin-top: -115PX;
+        margin-left: 30PX;
+    }
+   .swiper-cert {
+  height: 540PX; /* Фиксированная высота слайдера */
+}
+
+.swiper-cert .swiper-slide {
+  height: 100%; /* Слайд занимает всю высоту контейнера */
+  display: flex; /* Для выравнивания содержимого */
+  align-items: center; /* Вертикальное выравнивание */
+  justify-content: center; /* Горизонтальное выравнивание */
+}
+
+.swiper-cert .swiper-slide img {
+  max-height: 90%; /* Ограничение по высоте */
+  max-width: 90%; /* Ограничение по ширине */
+  object-fit: contain; /* Сохраняет пропорции */
+}
+.cert_btn {
+    position: relative;
+    width: 115PX;
+        left: 520PX;
+        top: -30PX;
+}
+.swiper-button-prev-sert, .swiper-button-next-sert {
+    position: absolute !important;
+    color: #FFF !important;
+    width: 34PX !important;
+    height: 30PX !important;
+    margin: -40PX 0 0 0 !important;
+    width: 34PX !important;
+    height: 30PX !important;
+    object-fit: contain !important;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 18PX !important;
+}
+.swiper-cert .swiper-slide {
+    margin-top: 30PX !important;
+}
 }
 /*news_slider*/
 .swiper_news {
@@ -964,6 +1069,62 @@ height: 155PX !important;
         from {opacity: 0;}
         to {opacity: 1;}
     }
+@media (min-width: 768px) and (max-width: 1024px)  {
+    .swiper_news {
+        margin-top: -90PX;
+    }
+ 
+    .swiper_news h2 {
+        font-size: 36PX;
+        margin-left: 30PX;
+        padding-bottom: 76PX;
+    }
+    .news_btn {
+        position: relative;
+    }
+    .swiper-news {
+        height: 440PX;
+        margin-bottom: 0;
+    }
+    .slide_news_wr {
+        min-width: 360PX !important;
+        height: 250PX !important;
+        overflow: hidden;
+    }
+    .news_btn {
+    position: relative;
+    width: 115PX;
+        left: 310PX;
+        top: -95PX;
+}
+.swiper-button-prev-news, .swiper-button-next-news {
+    position: absolute !important;
+    color: #FFF !important;
+    width: 34PX !important;
+    height: 30PX !important;
+    margin: -40PX 0 0 0 !important;
+    width: 34PX !important;
+    height: 30PX !important;
+    object-fit: contain !important;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 18PX !important;
+}
+.swiper-news .swiper-slide {
+    margin-top: 30PX !important;
+}
+.swiper-news .swiper-slide img {
+    width: 130PX;
+        margin: 0 0 -20px -25px;
+}
+.news_title {
+    font-size: 24PX;
+    width: 240PX;
+    align-self: flex-end;
+    margin-bottom: -25px; /* Компенсирует смещение */
+    transform: translateY(25px); /* Сдвигает вниз */
+}
+}
 /*video*/
 .video {
     margin-top: 64PX;

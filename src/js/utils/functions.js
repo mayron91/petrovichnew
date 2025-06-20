@@ -122,15 +122,26 @@ document.addEventListener('DOMContentLoaded', function() {
   centeredSlides: false, // Не центрировать слайды
   initialSlide: 0,     // Начинать с первого слайда
   freeMode: true,      // Плавная прокрутка без привязки
+   navigation: {
+    nextEl: '.swiper-button-next-sert',
+    prevEl: '.swiper-button-prev-sert',
+  },
   breakpoints: {
     // Адаптация для разных экранов
     768: {
-      slidesPerView: 2.5
+      slidesPerView: 2.5,
+      spaceBetween: 0,
     },
     1024: {
-      slidesPerView: 3.5
+      slidesPerView: 2.5,
+      spaceBetween: 0,
+    },
+    1025: {
+      slidesPerView: 4,
+      spaceBetween: 0,
     }
   }
+  
 });
 
   const swiper2 = new Swiper('.swiper-news', {
@@ -139,13 +150,17 @@ document.addEventListener('DOMContentLoaded', function() {
   centeredSlides: false, // Не центрировать слайды
   initialSlide: 0,     // Начинать с первого слайда
   freeMode: true,      // Плавная прокрутка без привязки
+   navigation: {
+    nextEl: '.swiper-button-next-news',
+    prevEl: '.swiper-button-prev-news',
+  },
   breakpoints: {
     // Адаптация для разных экранов
     768: {
       slidesPerView: 2.5
     },
     1024: {
-      slidesPerView: 3.5
+      slidesPerView: 2.5
     }
   }
 });
