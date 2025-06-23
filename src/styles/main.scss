@@ -1500,7 +1500,7 @@ height: 155PX !important;
     position: relative;
     z-index: 10;
     background: linear-gradient(0deg, rgba(156, 31, 135, 0.60) 0%, #51256A 0%, #1B2A55 100%);
-        padding-bottom: 55PX;
+    padding-bottom: 55PX;
 }
 .partners_banner_back {
     margin-top: 45PX;
@@ -1512,7 +1512,7 @@ height: 155PX !important;
     opacity: 0.6;
     background: url('../img/partners/back.jpg') no-repeat;
     background-position: center center;
-   background-size: contain;
+    background-size: contain;
 }
 .partners_banner_wr h1 {
     max-width: 235PX;
@@ -1548,9 +1548,9 @@ height: 155PX !important;
     padding-top: 10PX;
 }
 .partners_call_form_wr {
-        padding-bottom: 50PX;
-        max-width: 375PX;
-        margin: 0 auto;
+    padding-bottom: 50PX;
+    max-width: 375PX;
+    margin: 0 auto;
 }
 .partners_call_form_wr .call_form_back {
     margin-top: -144PX;
@@ -1574,7 +1574,7 @@ height: 155PX !important;
     padding: 20PX 0 0 0;
 }
 .partners_call_form_wr .form-group_main input {
-        width: 267PX;
+    width: 267PX;
 }
 .partners_call_form_wr .checkbox-label_main {
     margin-top: 20PX;
@@ -1584,12 +1584,16 @@ height: 155PX !important;
 }
 .partners_call_form_wr .submit-button_main {
     margin-top: 16PX;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .partners_file_text {
     font-size: 10PX;
     font-weight: 500;
     color: #fff;
-    margin: 5PX 0 10PX -35PX;
+    margin: 5PX 0 10PX 0;
+    text-align: right;
 }
 .partners_special_text {
     font-size: 8PX;
@@ -1610,7 +1614,6 @@ height: 155PX !important;
     border-radius: 8PX;
     color: #fff;
     cursor: pointer;
-    
 }
 .custom-file-upload img {
     margin-right: 10PX;
@@ -1645,6 +1648,104 @@ input[type="file"] {
 .swiper-partners {
     width: 100%;
     background-color: #fff;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .partners_banner_back {
+        margin-top: 25PX;
+    }
+    .partners_banner_wr h1 {
+        font-size: 20PX;
+        max-width: 550PX;
+        margin: -45PX 0 0 340PX;
+        padding-bottom:20PX;
+    }
+    .prev_wr {
+        flex-direction: row;
+        padding: 60PX 0 25PX 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .prev_card_wr {
+        width: 18%;
+        margin: 1%;
+        height: 150PX;
+        justify-content: space-between;
+    }
+    .prev_card_wr span {
+        font-size: 16PX;
+        width: 100%;
+    }
+    .partners_call_form_wr {
+        max-width: 100%;
+    }
+    .partners_call_form_wr .call_form_back {
+        width: 341PX;
+        height: 533PX;
+        margin-top: -333PX;
+        margin-left: 28PX;
+    }
+    .partners_call_form_wr .call_form_title_wr {
+        margin: 145PX 0 0 40PX;
+    }
+    .partners_call_form_wr .call_form_title_wr h3 {
+        font-size: 36PX;
+        width: 665PX;
+        margin: 315PX 0 0 215PX;
+    }
+    .partners_call_form_wr .feedback_form_main {
+        width: 100%;
+        max-width: 778PX;
+        height: 667PX;
+        margin: -60PX 0 0 140PX;
+    }
+    .partners_call_form_wr .form-group_main {
+        width: 100%;
+    }
+    .partners_call_form_wr .form-group_main input {
+        width: 100%;
+    }
+    
+    /* Новые стили для расположения phone и email в одну строку */
+    .form-group-phone-email {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 35PX;
+    }
+    .form-group-phone-email .form-group_main {
+        width: 48%;
+    }
+    .partners_call_form_wr #phone_main, 
+    .partners_call_form_wr #email_main {
+        width: 100%;
+    }
+    
+    /* Стили для расположения текста файла справа */
+    .file-upload-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 35PX;
+    }
+    .partners_file_text {
+        margin: 0;
+        text-align: right;
+        width: auto;
+    }
+    .file-upload {
+        width: 48%;
+    }
+    .custom-file-upload {
+        width: 100%;
+    }
+    .partners_call_form_wr .feedback-form_main {
+    padding: 33PX 30PX 0 30PX;
+    }
+    .form-group-phone-email {
+        padding: 0;
+    }
 }
 /*vacancy*/
 

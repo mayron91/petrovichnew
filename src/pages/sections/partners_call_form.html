@@ -11,25 +11,28 @@
             <input type="text" id="name_main" name="name" placeholder="Имя" required>
             <span class="error-message" id="nameError"></span>
         </div>
-        <div class="form-group_main">
-            <input type="tel" id="phone_main" name="phone" placeholder="Телефон" required>
-            <span class="error-message" id="phoneError"></span>
-        </div>
-        <div class="form-group_main">
-            <input type="email" id="email_main" name="email" placeholder="E-mail" required>
-            <span class="error-message" id="emailError"></span>
-        </div>
+       <div class="form-group-phone-email">
+    <div class="form-group_main">
+        <input type="tel" id="phone_main" name="phone" placeholder="Телефон" required>
+        <span class="error-message" id="phoneError"></span>
+    </div>
+    <div class="form-group_main">
+        <input type="email" id="email_main" name="email" placeholder="E-mail" required>
+        <span class="error-message" id="emailError"></span>
+    </div>
+</div>
         <div class="form-group_main">
             <input type="text" id="org_main" name="org" placeholder="Наименование организации" required>
             <span class="error-message" id="orgError"></span>
         </div>
         <span class="partners_file_text">Прикрепите Карточку с данными организации</span>
-        <div class="file-upload">
-    <label for="file_main" class="custom-file-upload">
-        <img src="img/partners/upload.svg" alt=""><span>Прикрепить файл</span>
-    </label>
-    <input type="file" id="file_main" name="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
-    
+<div class="file-upload-container">
+    <div class="file-upload">
+        <label for="file_main" class="custom-file-upload">
+            <img src="img/partners/upload.svg" alt=""><span>Прикрепить файл</span>
+        </label>
+        <input type="file" id="file_main" name="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+    </div>
 </div>
         
         <div class="form-group_main">
