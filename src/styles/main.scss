@@ -1649,7 +1649,33 @@ input[type="file"] {
     width: 100%;
     background-color: #fff;
 }
-
+.partners-grid {
+    display: none;
+}
+ .logo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .logo-item {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    .logo-item img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
 @media (min-width: 768px) and (max-width: 1024px) {
     .partners_banner_back {
         margin-top: 25PX;
@@ -1746,6 +1772,83 @@ input[type="file"] {
     .form-group-phone-email {
         padding: 0;
     }
+    .partners_file_text {
+        width: 100%;
+        text-align: left;
+        font-size: 14PX;
+        
+    }
+    .file-upload-container {
+        justify-content: flex-end;
+
+    }
+    .custom-file-upload {
+        width: 318PX;
+        height: 60PX;
+        margin: -20px 0 0 18px;
+    }
+    .custom-file-upload img {
+        width: 24PX;
+        height: 24PX;
+    }
+    .checkbox-label_main {
+        width: 100%;
+        align-items: center;
+    }
+    .partners_call_form_wr .checkbox-label_main span {
+        font-size: 14PX;
+        width: 500PX;
+    }
+    #agree_main {
+        margin-bottom: 0;
+    }
+    .partners_call_form_wr .checkbox-label_main {
+        margin-top: 35PX;
+    }
+    .partners_call_form_wr .submit-button_main {
+        margin-top: 115PX;
+        font-size: 24PX;
+    }
+    .partners_special_text {
+        font-size: 12PX;
+    }
+    .partners_swiper_wr h2 {
+        font-size: 36PX;
+        margin: 55PX 0 0 68PX;
+        padding-bottom: 53PX;
+    }
+    .partners_swiper_wr .swiper {
+        display: none;
+    }
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(150px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      justify-items: center;
+              margin-bottom: 50px;
+    }
+    
+    .partners-grid .logo-item {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+    
+    .partners-grid .logo-item img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
 }
 /*vacancy*/
 
