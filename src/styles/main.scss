@@ -95,6 +95,10 @@ a {
     .desk {
         display: block;
     }
+
+    .container {
+        max-width: 1440PX;
+    }
 }
 
 // ------------------------------------
@@ -374,6 +378,72 @@ a {
     }
 }
 
+@media (min-width: 1025px) {
+    .banner {
+        background: url('../img/main/banner.jpg') no-repeat;
+        margin-top: 76PX;
+        background-size: cover;
+        aspect-ratio: 4/3;
+    }
+
+    .banner_wr h1 {
+        font-size: 64PX;
+        width: 600PX;
+        line-height: normal;
+    }
+
+    .banner_position {
+        padding-top: 358PX;
+        width: 495PX;
+    }
+
+    .banner_btn_wr {
+        top: 202%;
+    }
+
+    .banner_btn_write {
+        width: 208PX;
+        height: 56PX;
+        font-size: 16PX;
+        margin-right: 35PX;
+        padding: 0px 45px;
+        white-space: break-spaces;
+        text-align: center;
+    }
+
+    .banner_btn_service {
+        width: 208PX;
+        height: 56PX;
+        border-radius: 18PX;
+    }
+
+    .gradient-text {
+        font-size: 16PX;
+    }
+
+    .banner_addr_wr p {
+        font-size: 24PX;
+        margin: 8PX 0;
+    }
+
+    .banner_addr_wr {
+        margin: -140PX auto 0 auto;
+        width: 610PX;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner_time img {
+        width: 20PX;
+        height: 20PX;
+        margin-left: -25px;
+    }
+
+    .banner_addr img {
+        margin-left: -25px;
+    }
+}
+
 /*services*/
 .services h2 {
     width: 100%;
@@ -387,7 +457,7 @@ a {
 }
 
 /* Стили для поп-апа */
-.popup-overlay {
+.serv_popup-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -400,7 +470,7 @@ a {
     justify-content: center;
 }
 
-.popup-content {
+.serv_popup-content {
     background-color: #fff;
     border-radius: 10px;
     max-width: 600px;
@@ -408,8 +478,8 @@ a {
     position: relative;
 }
 
-.popup-content p {
-    padding: 10PX;
+#service-order-popup {
+    display: none;
 }
 
 .close-btn {
@@ -729,6 +799,95 @@ a {
     }
 }
 
+@media (min-width: 1025px) {
+    .services {
+        margin-top: 202PX;
+    }
+
+    .services h2 {
+        font-size: 52PX;
+        align-items: flex-start;
+        margin: 50PX 0 20PX 20PX;
+    }
+
+    .service_card_wr {
+        width: 100%;
+        max-width: 320PX;
+        min-height: 348PX;
+    }
+
+    .services_wr {
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320PX, 1fr));
+        gap: 10px;
+    }
+
+    .service_icon {
+        width: 150PX;
+        max-height: 120PX;
+        margin-top: 45PX;
+        object-fit: contain;
+    }
+
+    .services_wr .service_card_wr:last-child .service_icon {
+        margin-top: 10PX;
+    }
+
+    .service_link {
+        justify-content: flex-end;
+    }
+
+    .service_link_text {
+        font-size: 20PX;
+        max-width: 180PX;
+        padding-right: 20PX;
+        padding-top: 20PX;
+    }
+
+    .service_link img {
+        display: none;
+    }
+
+    .service_card_bot {
+        height: 91PX;
+    }
+
+    .service_card_bot {
+        flex-direction: row;
+        gap: 5PX;
+    }
+
+    .gradient-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 12PX;
+        cursor: pointer;
+        font-size: 12PX;
+        font-weight: 600;
+        background: white;
+        border: 2px solid transparent;
+        background-image:
+            linear-gradient(white, white),
+            linear-gradient(90deg, #9C1F87, #1B2A55);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        width: 100PX;
+        height: 24PX;
+    }
+
+    .gradient-box span {
+        background: linear-gradient(90deg, #9C1F87, #1B2A55);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        position: relative;
+        z-index: 2;
+    }
+}
+
 /*call_form*/
 .call_form {
     max-width: 375PX;
@@ -959,6 +1118,68 @@ a {
     }
 }
 
+@media (min-width: 1025px) {
+    .call_form {
+        max-width: 874PX;
+        margin-top: 434PX;
+        margin-bottom: 282PX;
+    }
+
+    .call_form_back {
+        width: 387PX;
+        height: 616PX;
+        margin-top: -436PX;
+        margin-left: 475PX;
+    }
+
+    .call_form_title_wr h2 {
+        font-size: 52PX;
+        letter-spacing: normal;
+        margin-bottom: 15PX;
+    }
+
+    .call_form_title_wr h3 {
+        font-size: 40PX;
+        letter-spacing: normal;
+    }
+
+    .call_form_title_wr {
+        width: 656PX;
+        margin-top: 110PX;
+        padding-left: 0PX;
+    }
+
+    .feedback_form_main {
+        width: 433PX;
+        height: 608PX;
+        margin: -100PX 0 0 116PX;
+
+    }
+
+    .feedback_form_main h3 {
+        font-size: 24PX;
+        padding-top: 95PX;
+        padding-left: 42PX;
+    }
+
+    .form-group_main input {
+        width: 360PX;
+        height: 60PX;
+        margin-bottom: 25PX;
+    }
+
+    .submit-button_main {
+        width: 360PX;
+        height: 60PX;
+        margin-top: 15PX;
+    }
+
+    .checkbox-label_main span {
+
+        width: 330PX;
+    }
+}
+
 /*swiper-cert*/
 .swiper_cert {
     height: 440PX;
@@ -1043,6 +1264,72 @@ a {
         width: 115PX;
         left: 520PX;
         top: -30PX;
+    }
+
+    .swiper-button-prev-sert,
+    .swiper-button-next-sert {
+        position: absolute !important;
+        color: #FFF !important;
+        width: 34PX !important;
+        height: 30PX !important;
+        margin: -40PX 0 0 0 !important;
+        width: 34PX !important;
+        height: 30PX !important;
+        object-fit: contain !important;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 18PX !important;
+    }
+
+    .swiper-cert .swiper-slide {
+        margin-top: 30PX !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    .swiper_cert {
+        height: 680PX;
+    }
+
+    .swiper_cert h2 {
+        font-size: 52PX;
+        position: absolute;
+        margin-top: -145PX;
+        margin-left: 7PX;
+    }
+
+    .swiper-cert {
+        height: 540PX;
+        /* Фиксированная высота слайдера */
+    }
+
+    .swiper-cert .swiper-slide {
+        height: 100%;
+        /* Слайд занимает всю высоту контейнера */
+        display: flex;
+        /* Для выравнивания содержимого */
+        align-items: center;
+        /* Вертикальное выравнивание */
+        justify-content: center;
+        /* Горизонтальное выравнивание */
+    }
+
+    .swiper-cert .swiper-slide img {
+        max-height: 90%;
+        /* Ограничение по высоте */
+        max-width: 90%;
+        /* Ограничение по ширине */
+        object-fit: contain;
+        /* Сохраняет пропорции */
+    }
+
+    .cert_btn {
+        position: relative;
+        width: 115PX;
+        left: 688PX;
+        top: -43PX;
     }
 
     .swiper-button-prev-sert,
@@ -1223,6 +1510,13 @@ a {
     background-color: #1e3f6f;
 }
 
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev,
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    display: none !important;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1301,6 +1595,95 @@ a {
         transform: translateY(25px);
         /* Сдвигает вниз */
     }
+
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev,
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    .swiper_news {
+        margin-top: -90PX;
+        padding-bottom: 50PX;
+    }
+
+    .swiper_news h2 {
+        font-size: 52PX;
+        margin-left: 5PX;
+        padding-bottom: 30PX;
+        margin-top: 146PX;
+    }
+
+    .news_btn {
+        position: relative;
+        left: 376PX;
+        top: -73PX;
+
+    }
+
+    .swiper-news {
+        height: 440PX;
+        margin-bottom: 0;
+    }
+
+    .slide_news_wr {
+        min-width: 360PX !important;
+        height: 250PX !important;
+        overflow: hidden;
+    }
+
+    .news_btn {
+        position: relative;
+        width: 115PX;
+        left: 377PX;
+        top: -73PX;
+    }
+
+    .swiper-button-prev-news,
+    .swiper-button-next-news {
+        position: absolute !important;
+        color: #FFF !important;
+        width: 34PX !important;
+        height: 30PX !important;
+        margin: -40PX 0 0 0 !important;
+        width: 34PX !important;
+        height: 30PX !important;
+        object-fit: contain !important;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 18PX !important;
+    }
+
+    .swiper-news .swiper-slide {
+        margin-top: 30PX !important;
+    }
+
+    .swiper-news .swiper-slide img {
+        width: 130PX;
+        margin: 0 0 -20px -25px;
+    }
+
+    .news_title {
+        font-size: 24PX;
+        width: 240PX;
+        align-self: flex-end;
+        margin-bottom: -25px;
+        /* Компенсирует смещение */
+        transform: translateY(25px);
+        /* Сдвигает вниз */
+    }
+
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev,
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        display: flex !important;
+    }
 }
 
 /*video*/
@@ -1365,6 +1748,28 @@ a {
     }
 }
 
+@media (min-width: 1025px) {
+    .video_wr {
+        margin-bottom: 105PX;
+    }
+
+    .video_wr h2 {
+        font-size: 32PX;
+        padding: 144PX 0 0 60PX;
+    }
+
+    .video_wr h3 {
+        font-size: 26PX;
+        padding: 0PX 0 0 60PX;
+        max-width: 100%;
+    }
+
+    .video_wr p {
+        padding: 20PX 60PX;
+        font-size: 26PX;
+    }
+}
+
 /*advantages*/
 .advantages {
     background-color: #fff;
@@ -1407,6 +1812,29 @@ a {
         margin: 0;
         max-width: 200PX;
         width: 100%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .advantages {
+        padding-bottom: 72PX;
+    }
+
+    .advantages_wr {
+        flex-direction: row;
+        padding: 20PX 0 0 0PX;
+        justify-content: space-between;
+    }
+
+    .advantages_card p {
+        margin: 0;
+        max-width: 250PX;
+        width: 100%;
+        font-size: 20PX;
+    }
+
+    .advantages_card h2 {
+        font-size: 64PX;
     }
 }
 
@@ -1753,6 +2181,158 @@ a {
     }
 }
 
+@media (min-width: 1025px) {
+    .team_wr {
+        margin-top: 103PX;
+    }
+
+    .founder_wr {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        /* Две колонки - первая для изображения, вторая для остального контента */
+        gap: 20px;
+        /* Отступ между колонками */
+        align-items: start;
+        /* Выравнивание элементов по верху */
+    }
+
+    .founder_wr img {
+        grid-column: 1;
+        /* Изображение в первой колонке */
+        grid-row: 1 / span 4;
+        /* Занимает 4 строки (все содержимое) */
+        max-width: 100%;
+        /* Чтобы изображение не выходило за границы */
+        height: auto;
+        margin: 35PX 0 0 9PX;
+
+        width: 440PX;
+    }
+
+    .founder_wr h2 {
+        grid-column: 2;
+        /* Заголовок во второй колонке */
+        grid-row: 1;
+        margin: 0;
+        /* Убираем стандартные отступы */
+        font-size: 52PX;
+        padding: 30PX 0 0 109PX;
+        width: 630PX;
+    }
+
+    .founder_wr span {
+        grid-column: 2;
+        /* Текст "Основатель компании" во второй колонке */
+        grid-row: 2;
+        padding-left: 110PX;
+        margin-top: -60PX;
+        font-size: 26PX;
+    }
+
+    .founder_wr .special_team {
+        grid-column: 2;
+        /* Специальный элемент во второй колонке */
+        grid-row: 3;
+        font-size: 150PX;
+        /* Увеличиваем размер кавычки */
+        line-height: 1;
+        /* Убираем лишний межстрочный интервал */
+        margin-top: -212PX;
+        padding-right: 8PX;
+    }
+
+
+    .founder_wr p:first-of-type {
+        grid-column: 2;
+        grid-row: 4;
+        margin-left: 90PX;
+        gap: 0;
+        margin-top: -60PX;
+        width: 760PX;
+        font-size: 28PX;
+    }
+
+    .founder_wr p:last-of-type {
+        grid-column: 2;
+        grid-row: 5;
+        margin-left: 90PX;
+        gap: 0;
+        margin-top: -72PX;
+        width: 760PX;
+        font-size: 28PX;
+    }
+
+    .our_team_wr h2 {
+        font-size: 52PX;
+        margin-top: 138PX;
+        padding-left: 10PX;
+    }
+
+    .our_team_wr p {
+        font-size: 28PX;
+        padding: 50PX 10PX;
+    }
+
+    .team_card_wr {
+        grid-template-columns: repeat(auto-fill, minmax(152PX, 320PX));
+        justify-content: center;
+        margin-top: 60PX;
+        gap: 20PX;
+    }
+
+    .team_card img {
+        height: auto;
+        max-height: 320px;
+        /* Ограничиваем максимальную высоту */
+
+    }
+
+    .team_cont_wr {
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        min-height: 90px;
+        padding: 5px 0;
+
+    }
+
+    .team_card h3 {
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 5px;
+        padding: 0 10px;
+        margin-bottom: 4px;
+    }
+
+    .team_cont_wr {
+        min-height: 155PX;
+    }
+
+    .team_card h3 {
+        font-size: 24PX;
+        line-height: normal;
+        text-align: center;
+    }
+
+    .team_card span {
+        font-size: 16PX;
+        line-height: normal;
+        text-align: center;
+        padding: 0 10PX 10PX 10PX;
+    }
+
+    .team_cont_link {
+        padding: 0 20PX 10PX 20PX;
+    }
+
+    .team_cont_link a {
+        font-size: 14PX;
+    }
+
+    .team_cont_link img {
+        width: 16PX;
+    }
+}
+
 /*partners*/
 .partners_banner_wr {
     width: 100%;
@@ -1969,7 +2549,7 @@ input[type="file"] {
     object-fit: contain;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
     .partners_banner_back {
         margin-top: 25PX;
     }
@@ -2175,6 +2755,82 @@ input[type="file"] {
 
 }
 
+@media (min-width: 1025px) {
+    .partners_banner_back {
+        margin-top: 35PX;
+    }
+
+    .partners_banner_wr h1 {
+        font-size: 28PX;
+        max-width: 590PX;
+        margin: -46PX 0 0 380PX;
+    }
+
+    .partners_banner_wr {
+        padding-bottom: 82PX;
+    }
+
+    .prev_card_wr span {
+        font-size: 20PX;
+    }
+
+    .prev_wr {
+        padding: 60PX 0 50PX 0;
+    }
+
+    .partners_call_form_wr .call_form_title_wr h3 {
+        font-size: 40PX;
+        width: 700PX;
+        margin: 336PX 0 0 318PX;
+    }
+
+    .partners_call_form_wr .call_form_title_wr {
+        margin: 145PX 0 0 150PX;
+    }
+
+    .partners_call_form_wr .call_form_back {
+        width: 386PX;
+        height: 616PX;
+        margin-top: -369PX;
+        margin-left: 126PX;
+    }
+
+    .partners_call_form_wr .feedback_form_main {
+        max-width: 1006PX;
+        margin: -104PX 0 0 235PX;
+        padding: 46PX 87PX;
+    }
+
+    .partners_call_form_wr .submit-button_main {
+        margin-top: 73PX;
+    }
+
+    .partners_swiper_wr h2 {
+        font-size: 50PX;
+        margin: 103PX 0 0 46PX;
+        padding-bottom: 90PX;
+    }
+
+    .partners-grid {
+        max-width: 100%;
+        grid-template-columns: repeat(5, minmax(150PX, 1fr));
+    }
+
+    .partners-grid .logo-item {
+        width: 150PX;
+        height: 150PX;
+    }
+
+    .partners-grid .logo-item img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .partners_swiper {
+        padding-bottom: 135PX;
+    }
+}
+
 /*vacancy*/
 
 .accordion {
@@ -2314,7 +2970,7 @@ input[type="file"] {
     padding: 5PX 0 30PX 0;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
     .vacancy_accordeon {
         padding-bottom: 52PX;
     }
@@ -2476,6 +3132,85 @@ input[type="file"] {
     }
 }
 
+@media (min-width: 1025px) {
+    .vacancy_accordeon_wr h2 {
+        font-size: 28PX;
+        width: 780PX;
+        margin: 114PX 0 0 -14PX;
+
+    }
+
+    .vacancy_accordeon_wr h1 {
+        font-size: 50PX;
+        margin: 40PX 45PX 0 0;
+    }
+
+    .accordion {
+        max-width: 1140PX;
+        margin: 44PX 0 0 100PX;
+    }
+
+    .garant_title {
+        font-size: 50PX;
+        margin: 150PX 0 0 7PX;
+    }
+
+    .vacancy_accordeon {
+        padding-bottom: 64PX;
+    }
+
+    .garant {
+        padding-bottom: 40PX;
+    }
+
+    .garant_card {
+        margin-left: 40PX;
+    }
+
+    .garant_card span {
+        width: 250PX;
+    }
+
+    .garant_card_wr {
+        padding: 77PX 0 0PX 0PX;
+    }
+
+    .vacancy_call_form .call_form_title_wr h3 {
+        font-size: 50PX;
+        margin: 383PX 0 0 187PX;
+    }
+
+    .vacancy_call_form .call_form_back {
+        margin-top: -298PX;
+        margin-left: 120PX;
+    }
+
+    .vacancy_call_form .feedback_form_main {
+        height: 667PX;
+    }
+
+    .vacancy_call_form .submit-button_main {
+        margin-top: 70PX;
+    }
+
+    .vacancy_call_form .partners_call_form_wr {
+        padding-bottom: 193PX;
+    }
+
+    .vacancy_form-group #name_main,
+    .vacancy_form-group #phone_main {
+        max-width: 358PX;
+    }
+
+    .vacancy_call_form #org_main {
+        max-width: 778PX;
+    }
+
+    .vacancy_call_form .form-group_main input {
+        margin-bottom: 24PX;
+    }
+}
+
 /*service*/
 .dropdown_service {
     position: relative;
@@ -2600,7 +3335,7 @@ input[type="file"] {
     margin-left: 10PX;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
     .service_block_link_wr {
         display: none;
     }
@@ -2612,23 +3347,52 @@ input[type="file"] {
     .breadcr_wr ul {
         font-size: 16PX;
     }
-    
+
     .service_content_wr h1 {
         font-size: 36PX;
-            margin: 90PX 0 45PX 28PX;
+        margin: 90PX 0 45PX 28PX;
     }
+
     .service_content_wr h2 {
         font-size: 20PX;
         margin: 0 0 66PX 28PX;
         max-width: 600PX;
     }
-    .service_content_wr p{
+
+    .service_content_wr p {
         font-size: 18PX;
         padding: 0 28PX;
     }
+
     .service_content_wr li {
         margin: 0;
         padding: 0 40PX;
         font-size: 18PX;
+    }
+}
+
+@media (min-width: 1025px) {
+        .breadcr_wr {
+        margin: 57PX 0 0 9PX;
+    }
+    .breadcr_wr a {
+        font-size: 24PX;
+    }
+    .service_content_wr h1 {
+        font-size: 50PX;
+        margin: 79PX 0 66PX 9PX
+    }
+    .service_content_wr h2 {
+        font-size: 28PX;
+        max-width: 890PX;
+        margin: 0px 0 61PX 8PX;
+    }
+    .service_content_wr p {
+        font-size: 26PX;
+                padding: 26PX 7PX 15PX 7PX;
+    }
+    .service_content_wr li {
+        font-size: 26PX;
+                padding: 0 22PX;
     }
 }

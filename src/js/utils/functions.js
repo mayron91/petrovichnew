@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Функция для открытия поп-апа
     function openServicePopup(serviceId) {
         // Здесь можно загружать разный контент в зависимости от serviceId
-        const popupTitle = document.getElementById('popupTitle');
-        const popupContent = document.getElementById('popupContent');
+        const popupTitle = document.getElementById('serv_popupTitle');
+        const popupContent = document.getElementById('serv_popupContent');
         
         // Пример данных (можно заменить на AJAX-запрос или другой источник)
         const servicesData = {
@@ -159,8 +159,8 @@ document.addEventListener('DOMContentLoaded', function() {
     768: {
       slidesPerView: 2.5
     },
-    1024: {
-      slidesPerView: 2.5
+    1440: {
+      slidesPerView: 3.5
     }
   }
 });
@@ -351,3 +351,35 @@ checkOverflowAndTruncate(block);
 window.addEventListener('resize', () => {
   checkOverflowAndTruncate(block);
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Открытие попапа
+  document.querySelector('.phone_desk_call').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('callback-popup_header').style.display = 'flex';
+  });
+  
+  // Закрытие попапа
+  document.querySelector('.close-btn').addEventListener('click', function() {
+    document.getElementById('callback-popup_header').style.display = 'none';
+  });
+  
+  // Закрытие при клике вне попапа
+  document.getElementById('callback-popup').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.display = 'none';
+    }
+  });
+  
+  // Обработка формы
+  document.getElementById('callback-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Здесь можно добавить AJAX-запрос для отправки данных
+    alert('Спасибо! Мы скоро вам перезвоним.');
+    document.getElementById('callback-popup').style.display = 'none';
+    this.reset();
+  });
+});
+
+

@@ -51,7 +51,9 @@ header .container {
     right: 0;
     margin-right: 30PX;
 }
-
+#callback-popup_header {
+    display: none;
+}
 /* Стили для меню */
 .menu {
     position: fixed;
@@ -205,7 +207,9 @@ header .container {
    .header {
     display: none;
    } 
-  
+.phone_desk_call {
+    display: none;
+}
 .header_desk {
     display: flex;
     flex-direction: row;
@@ -372,4 +376,244 @@ header .container {
 .phone_desk img {
     margin-left: 24PX;
 }
+.img_phone_desk_desk {
+    display: none;
+}
+}
+@media (min-width: 1025px) {
+  .header {
+    display: none;
+   } 
+  .img_phone_tab {
+    display: none;
+  }
+  .img_phone_desk_desk {
+    display: block;
+    width: 20PX;
+    height: 20PX;
+    margin-right: 12PX;
+  }
+.header_desk {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 20PX auto 0 auto;
+    background: #fff;
+    height: 84px;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+    transition: all 0.3s ease; /* Добавляем плавный переход */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header_desk.scrolled {
+    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Добавляем тень при скролле */
+}
+
+   .logo {
+    position: relative;
+    left: 0;
+    transform: none;
+    
+    margin-left: 50PX;
+   }
+   .logo img {
+    width: 280PX;
+    height: 54PX;
+   }
+
+.menu_desk {
+    position: relative;
+    display: flex;
+    margin-left: 80PX;
+}
+
+.menu_desk > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu_desk > ul > li {
+    position: relative;
+    margin-right: 18PX;
+}
+
+.menu_desk a {
+    text-decoration: none;
+    color: $base-color;
+    padding: 10PX 0;
+    display: block;
+    transition: color 0.3s;
+    font-size: 16PX;
+    font-weight: 600;
+}
+
+.menu_desk a:hover {
+    color: #0066cc;
+}
+
+.dropdown_desk {
+    position: relative;
+}
+
+.dropdown-toggle_desk {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: $base-color;
+    font-size: 14PX;
+    font-weight: 600;
+}
+.dropdown-toggle_desk img {
+    margin-left: 10PX;
+}
+.dropdown-toggle_desk:hover {
+    color: #0066cc;
+}
+
+.dropdown-content_desk {
+    position: absolute;
+    /* Заменяем height: 100vh на max-height с расчетом */
+    max-height: calc(100vh - 90PX); /* 40px - отступ от верха экрана */
+    top: 100%;
+    left: 0;
+    width: 250px;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding-left: 0;
+    display: block;
+    /* Добавляем прокрутку */
+    overflow-y: auto; /* Вертикальная прокрутка при необходимости */
+    overflow-x: hidden; /* Горизонтальная прокрутка скрыта */
+    /* Стиль скроллбара (опционально) */
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f5f5f5;
+}
+
+/* Стилизация скроллбара для WebKit */
+.dropdown-content_desk::-webkit-scrollbar {
+    width: 6px;
+}
+.dropdown-content_desk::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 3px;
+}
+.dropdown-content_desk::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.dropdown_desk:hover .dropdown-content_desk {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Стили для вертикального меню */
+.dropdown-content_desk {
+    display: block;
+}
+
+.dropdown-content_desk li {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 260px;
+    border-radius: 4PX;
+    background-color: #fff;
+    margin: 0 0 2PX 0;
+}
+
+.dropdown-content_desk li a {
+    padding: 8px 15px;
+    border-bottom: 1px solid #eee;
+    display: block;
+}
+
+.dropdown-content_desk li:last-child a {
+    border-bottom: none;
+}
+.phone_desk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16PX;
+    font-weight: 600;
+    color: $base-color;
+    margin-right: 50PX;
+}
+.phone_desk img {
+    margin-left: 24PX;
+}  
+.phone_desk_call {
+    display: block;
+    border: 1PX solid $base-color;
+    border-radius: 12PX;
+    padding: 5PX 22PX;
+    margin-right: 45PX;
+    color: $base-color;
+}
+.phone_desk_wr {
+    display: flex;
+}
+/* Стили для поп-апа */
+.popup-overlay_header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content_header {
+    background-color: #34517F;
+    border-radius: 10px;
+    max-width: 426px;
+    height: 445PX;
+    width: 90%;
+    position: relative;
+}
+#callback-popup_header h3 {
+    font-size: 24PX;
+    text-align: center;
+    color: #fff;
+}
+#callback-popup_header .form-group_main {
+    width: 100%;
+}
+#callback-popup_header input {
+    width: 100%;
+    max-width: 358PX;
+    height: 60PX;
+}
+#callback-popup_header #agree_main {
+    width: 24PX;
+    height: 24PX;
+}
+#callback-popup_header .submit-button_main {
+    width: 100%;
+    max-width: 358PX;
+    height: 56PX;
+}
+#callback-popup_header .checkbox-label_main span {
+    width: 60%;
+}   
 }
