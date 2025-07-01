@@ -310,7 +310,11 @@ a {
         opacity: 1;
     }
 }
-
+@media (min-width: 768px) and (max-width: 850px) {
+        .banner_position {
+        padding-top: 75PX !important;
+    }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
 
     /*banner*/
@@ -377,7 +381,11 @@ a {
         margin-left: -25px;
     }
 }
-
+@media (min-width: 1025px) and (max-width: 1230px) {
+        .banner_position {
+        padding-top: 290PX !important;
+    }
+}
 @media (min-width: 1025px) {
     .banner {
         background: url('../img/main/banner.jpg') no-repeat;
@@ -978,6 +986,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    padding: 0 15PX;
 }
 
 #agree_main {
@@ -1548,7 +1557,8 @@ a {
     }
 
     .slide_news_wr {
-        min-width: 360PX !important;
+        width: 100%;
+        max-width: 360PX !important;
         height: 250PX !important;
         overflow: hidden;
     }
@@ -1854,6 +1864,8 @@ a {
 .founder_wr span {
     font-size: 16PX;
     padding-left: 20PX;
+        width: 100%;
+    display: block;
 }
 
 .founder_wr img {
@@ -2077,7 +2089,7 @@ a {
         /* Текст "Основатель компании" во второй колонке */
         grid-row: 2;
         padding-left: 93PX;
-        margin-top: -43PX;
+        margin-top: -10PX;
     }
 
     .founder_wr .special_team {
@@ -2332,7 +2344,82 @@ a {
         width: 16PX;
     }
 }
+@media (min-width: 1025px) and (max-width: 1300px) {
+.founder_wr {
+        display: grid;
+        grid-template-columns: 320PX 1fr !important;
+        /* Две колонки - первая для изображения, вторая для остального контента */
+        gap: 20px;
+        /* Отступ между колонками */
+        align-items: start;
+        /* Выравнивание элементов по верху */
+    }
 
+    .founder_wr img {
+        grid-column: 1;
+        /* Изображение в первой колонке */
+        grid-row: 1 / 4 !important;
+        /* Занимает 4 строки (все содержимое) */
+        max-width: 100%;
+        /* Чтобы изображение не выходило за границы */
+        height: auto;
+        margin: 25PX 0 0 27PX;
+    }
+
+    .founder_wr h2 {
+        grid-column: 2;
+        /* Заголовок во второй колонке */
+        grid-row: 1;
+        margin: 0;
+        /* Убираем стандартные отступы */
+        font-size: 40PX;
+        padding: 30PX 0 0 30PX !important;
+    }
+
+    .founder_wr span {
+        grid-column: 2;
+        /* Текст "Основатель компании" во второй колонке */
+        grid-row: 2;
+        margin-left: 10PX !important;
+        margin-top: -10PX !important;
+        padding-left: 22PX !important;
+    }
+
+    .founder_wr .special_team {
+        grid-column: 2;
+        /* Специальный элемент во второй колонке */
+        grid-row: 3;
+        font-size: 100PX;
+        /* Увеличиваем размер кавычки */
+        line-height: 1;
+        /* Убираем лишний межстрочный интервал */
+        margin-top: -86PX;
+        padding-right: 78PX;
+    }
+
+
+    .founder_wr p:first-of-type {
+        grid-column: 2;
+        grid-row: 4;
+        margin-left: 10PX !important;
+        gap: 0;
+        margin-top: -30PX !important;
+        width: 100% !important;
+        font-size: 22PX !important;
+        padding-right: 40PX !important;
+    }
+
+    .founder_wr p:last-of-type {
+        grid-column: 2;
+        grid-row: 5;
+       margin-left: 10PX !important;
+        gap: 0;
+        margin-top: -30PX !important;
+       width: 100% !important;
+        font-size: 22PX !important;
+        padding-right: 40PX !important;
+    }
+}
 /*partners*/
 .partners_banner_wr {
     width: 100%;
@@ -2597,7 +2684,8 @@ input[type="file"] {
 
     .partners_call_form_wr .call_form_title_wr h3 {
         font-size: 36PX;
-        width: 665PX;
+        width: 100%;
+        max-width: 665PX;
         margin: 315PX 0 0 215PX;
     }
 
@@ -2796,6 +2884,7 @@ input[type="file"] {
     }
 
     .partners_call_form_wr .feedback_form_main {
+        width: 100%;
         max-width: 1006PX;
         margin: -104PX 0 0 235PX;
         padding: 46PX 87PX;
@@ -2828,6 +2917,21 @@ input[type="file"] {
 
     .partners_swiper {
         padding-bottom: 135PX;
+    }
+    .file-upload-container {
+        margin-top: 10PX;
+        padding: 0;
+    }
+    .partners_file_text {
+        width: 50%;
+    }
+    .file-upload {
+        width: 50%;
+    }
+    .custom-file-upload {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
     }
 }
 
@@ -3060,7 +3164,7 @@ input[type="file"] {
 
     .vacancy_call_form .call_form_title_wr h3 {
         font-size: 36PX;
-        width: 620PX;
+        width: 440PX;
         margin: 339PX 0 0 241PX;
     }
 
@@ -3131,7 +3235,60 @@ input[type="file"] {
         padding-bottom: 150PX;
     }
 }
-
+@media (min-width: 768px) and (max-width: 950px) {
+    .vacancy_call_form .feedback_form_main {
+        height: 710PX !important;
+    }
+    .vacancy_call_form .call_form_title_wr h3 {
+        width: 550PX !important;
+    }
+    .partners_call_form_wr .feedback_form_main {
+        max-width: 80% !important;
+    }
+.vacancy_call_form .feedback-form_main {
+    flex-direction: column !important;
+}
+.vacancy_form-group {
+    flex-direction: column !important;
+}
+.vacancy_form-group #name_main, .vacancy_form-group #phone_main {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+}
+.vacancy_form-group #fname_main, .vacancy_form-group #email_main {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+}
+.vacancy_call_form .partners_file_text {
+    width: 50% !important;
+    display:  block !important;
+}
+.vacancy_call_form .custom-file-upload {
+    min-width: 100PX !important;
+    width: 100% !important;
+}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .partners_call_form_wr .call_form_title_wr h3 {
+        max-width: 80% !important;
+        width: 80% !important;
+    }
+    .partners_file_text {
+        width: 50% !important;
+        display: block !important;
+    }
+    .custom-file-upload {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .file-upload-container {
+padding: 0 !important;
+    }
+        .prev_card_wr span {
+            font-size: 14PX !important;
+        }
+}
 @media (min-width: 1025px) {
     .vacancy_accordeon_wr h2 {
         font-size: 28PX;
@@ -3168,7 +3325,8 @@ input[type="file"] {
     }
 
     .garant_card span {
-        width: 250PX;
+        width: 100%;
+        max-width: 250PX;
     }
 
     .garant_card_wr {
@@ -3187,6 +3345,7 @@ input[type="file"] {
 
     .vacancy_call_form .feedback_form_main {
         height: 667PX;
+        box-sizing: border-box;
     }
 
     .vacancy_call_form .submit-button_main {
@@ -3210,7 +3369,18 @@ input[type="file"] {
         margin-bottom: 24PX;
     }
 }
-
+@media (min-width: 1025px) and (max-width: 1300px) {
+.partners_call_form_wr .feedback_form_main {
+    max-width: 778PX !important;
+    padding: 10PX !important;
+}
+    .vacancy_form-group #name_main, .vacancy_form-group #phone_main {
+        max-width: 315PX !important;
+    }
+    .partners_call_form_wr .call_form_title_wr h3 {
+        width: 540PX !important;
+    }
+}
 /*service*/
 .dropdown_service {
     position: relative;

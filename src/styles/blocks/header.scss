@@ -203,7 +203,7 @@ header .container {
 .menu_desk {
     display: none;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 900px) and (max-width: 1300px) {
    .header {
     display: none;
    } 
@@ -215,7 +215,6 @@ header .container {
     flex-direction: row;
     width: 100%;
     margin: 10px auto 0 auto;
-    max-width: 1024px;
     background: #fff;
     height: 60px;
     position: fixed;
@@ -380,7 +379,7 @@ header .container {
     display: none;
 }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1300px) {
   .header {
     display: none;
    } 
@@ -587,7 +586,7 @@ header .container {
     background-color: #34517F;
     border-radius: 10px;
     max-width: 426px;
-    height: 445PX;
+    height: 485PX;
     width: 90%;
     position: relative;
 }
@@ -598,6 +597,7 @@ header .container {
 }
 #callback-popup_header .form-group_main {
     width: 100%;
+    padding: 0 50PX;
 }
 #callback-popup_header input {
     width: 100%;
