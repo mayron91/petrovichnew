@@ -315,10 +315,53 @@
 </div>
   
 <!-- Поп-ап окно -->
- 
+ <div class="popup_overlay_services">
+  <div class="popup_services">
+    <button class="popup_close_services">&times;</button>
+    <h3 class="popup_title">Заявка на ремонт</h3>
+    <form class="contact_form_services">
+      <div class="form_group_services">
+        <input 
+          type="text" 
+          id="fullname" 
+          name="fullname" 
+          placeholder="ФИО контактного лица"
+          required
+        >
+      </div>
+      <div class="form_group_services">
+        <input 
+          type="tel" 
+          id="phone_service" 
+          name="phone" 
+          placeholder="Телефон"
+          required
+        >
+      </div>
+      <div class="form_group_services">
+        <input 
+          type="text" 
+          id="car" 
+          name="car" 
+          placeholder="Марка автомобиля"
+          required
+        >
+      </div>
+      <div class="form-group_main">
+                        <label class="checkbox-label_main">
+                            <input type="checkbox" id="agree_main" name="agree" required>
+                            <span>Соглашение с политикой конфиденциальности</span>
+                        </label>
+                        <span class="error-message_main" id="agreeError"></span>
+                    </div>
+      <button type="submit" class="submit_btn_services">Отправить</button>
+    </form>
+  </div>
+</div>
+
 <div id="servicePopup" class="serv_popup-overlay">
     <div class="serv_popup-content">
-        <span class="close-btn">&times;</span>
+        <span class="serv_close-btn">&times;</span>
         <h2 id="serv_popupTitle">Техническое обслуживание</h2>
         <div id="serv_popupContent">
             <!-- Контент поп-апа будет загружаться динамически -->

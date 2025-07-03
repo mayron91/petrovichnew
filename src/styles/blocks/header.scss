@@ -214,6 +214,7 @@ header .container {
     display: flex;
     flex-direction: row;
     width: 100%;
+    max-width: 1440PX;
     margin: 10px auto 0 auto;
     background: #fff;
     height: 60px;
@@ -226,7 +227,14 @@ header .container {
     left: 50%;
     transform: translateX(-50%);
 }
-
+.header_desk_wrapper {
+    width: 100%;
+    background: #fff;
+    height: 60PX;
+    margin-top: 10PX;
+    position: fixed;
+    z-index: 100;
+}
 .header_desk.scrolled {
     margin: 0 auto;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Добавляем тень при скролле */
@@ -392,13 +400,22 @@ header .container {
     height: 20PX;
     margin-right: 12PX;
   }
+.header_desk_wrapper {
+    width: 100%;
+    background: #fff;
+    height: 84PX;
+    margin-top: 20PX;
+    position: fixed;
+    z-index: 100;
+}
 .header_desk {
     display: flex;
     flex-direction: row;
     width: 100%;
+    max-width: 1440PX;
     margin: 20PX auto 0 auto;
     background: #fff;
-    height: 84px;
+    height: 84PX;
     position: fixed;
     align-items: center;
     justify-content: space-between;

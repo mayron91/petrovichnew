@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Добавляем обработчик для кнопки закрытия
-        document.querySelector('.close-btn').addEventListener('click', closeServicePopup);
+        document.querySelector('.serv_close-btn').addEventListener('click', closeServicePopup);
     });
     
     // Функция для открытия поп-апа
@@ -81,7 +81,57 @@ document.addEventListener('DOMContentLoaded', function() {
         const servicesData = {
             1: {
                 title: 'Техническое обслуживание',
-                content: '<p>Подробная информация о техническом обслуживании...</p>'
+                content: `
+<p>Легковой и легкогрузовой транспорт от 1,5 до 3 т</p>
+<ul>
+    <li>АКПП (автоматическая коробка передач)</li>
+    <li>СVT (вариатор)</li>
+    <li>Аккумулятор</li>
+    <li>Кондиционер</li>
+    <li>Двигатель - замена масла и масляного фильтра</li>
+    <li>Фильтр воздушный</li>
+    <li>Фильтр салона</li>
+    <li>Фильтр топливный</li>
+    <li>ГУР (гидроусилитель руля)</li>
+    <li>Тормозная система</li>
+    <li>Гидравлическая система (сцепление)</li>
+    <li>Задний мост</li>
+    <li>Передний мост</li>
+    <li>Оборудование adblue (мочевина)</li>
+    <li>Система охлаждения</li>
+    <li>Рулевое управление</li>
+    <li>Ходовая часть</li>
+    <li>КПП</li>
+</ul>
+
+<p>Грузовой транспорт от 3 т</p>
+<ul>
+    <li>Балансир - доливка уровня масла</li>
+    <li>Бортовая передача</li>
+    <li>Гидроборт</li>
+    <li>Делитель КПП</li>
+    <li>Коробка отбора мощности</li>
+    <li>Насос подъема кабины</li>
+    <li>Раздаточка коробка</li>
+    <li>Редуктор переднего/среднего/заднего моста</li>
+    <li>Аккумулятор</li>
+    <li>Кондиционер</li>
+    <li>Двигатель - замена масла и масляного фильтра</li>
+    <li>Фильтр воздушный</li>
+    <li>Фильтр салона</li>
+    <li>Фильтр топливный</li>
+    <li>ГУР (гидроусилитель руля)</li>
+    <li>Тормозная система</li>
+    <li>Гидравлическая система (сцепление)</li>
+    <li>Задний мост</li>
+    <li>Передний мост</li>
+    <li>Оборудование adblue (мочевина)</li>
+    <li>Система охлаждения</li>
+    <li>Рулевое управление</li>
+    <li>Ходовая часть</li>
+    <li>КПП</li>
+</ul>
+`
             },
             2: {
                 title: 'Другая услуга',
@@ -226,50 +276,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-     document.addEventListener('DOMContentLoaded', function() {
-        // Находим все ссылки "Подробнее" в слайдах
-        const newsLinks = document.querySelectorAll('.news_link');
-        const newsPopup = document.getElementById('newsPopup');
-        const closePopup = document.querySelector('.close-news-popup');
-        
-        // Для каждой ссылки добавляем обработчик клика
-        newsLinks.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Здесь можно добавить загрузку разного контента для разных новостей
-                // Сейчас просто показываем попап
-                
-                newsPopup.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
-            });
-        });
-        
-        // Закрытие попапа
-        closePopup.addEventListener('click', function() {
-            newsPopup.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Возвращаем скролл
-        });
-        
-        // Закрытие при клике вне попапа
-        newsPopup.addEventListener('click', function(e) {
-            if (e.target === newsPopup) {
-                newsPopup.style.display = 'none';
-                document.body.style.overflow = 'auto';
+   document.addEventListener('DOMContentLoaded', function() {
+    const newsLinks = document.querySelectorAll('.news_link');
+    const newsPopup = document.getElementById('newsPopup');
+    const closePopup = document.querySelector('.close-news-popup');
+    const popupContent = newsPopup.querySelector('.news-popup-content');
+    
+    newsLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Находим контейнер с полным контентом
+            const contentContainer = this.closest('.slide_news_wr')
+                .querySelector('.news-full-content');
+            
+            // Клонируем контент
+            const content = contentContainer.cloneNode(true);
+            content.style.display = 'block';
+            
+            // Очищаем попап и вставляем новый контент
+            while (popupContent.children.length > 1) {
+                popupContent.removeChild(popupContent.lastChild);
             }
+            popupContent.appendChild(content);
+            
+            newsPopup.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         });
-        
-        // Обработчик для кнопки в попапе
-        const popupButton = document.querySelector('.news-popup-button');
-        if (popupButton) {
-            popupButton.addEventListener('click', function() {
-                // Здесь можно добавить переход к форме заявки
-                alert('Перенаправление на форму заявки');
-                newsPopup.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
+    });
+    
+    // Остальной код закрытия попапа без изменений
+    closePopup.addEventListener('click', function() {
+        newsPopup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    newsPopup.addEventListener('click', function(e) {
+        if (e.target === newsPopup) {
+            newsPopup.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     });
+});
 
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -322,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header_desk');
+    const header = document.querySelector('.header_desk .header_desk_wrapper');
     if (window.scrollY > 10) { // Если прокрутили больше 10px
         header.classList.add('scrolled');
     } else {
@@ -382,4 +430,40 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// JavaScript для работы попапа services
+document.querySelectorAll('.service_btn').forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.popup_overlay_services').style.display = 'flex';
+  });
+});
 
+document.querySelector('.popup_close_services').addEventListener('click', function() {
+  document.querySelector('.popup_overlay_services').style.display = 'none';
+});
+
+// Закрытие по клику вне попапа
+document.querySelector('.popup_overlay_services').addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.style.display = 'none';
+  }
+});
+
+// Обработка отправки формы
+document.querySelector('.contact_form_services').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Здесь будет логика отправки данных
+  const formData = {
+    name: this.fullname.value,
+    phone: this.phone.value,
+    car: this.car.value
+  };
+  
+  console.log('Отправка данных:', formData);
+  alert('Ваша заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+  
+  // Очистка формы и закрытие попапа
+  this.reset();
+  document.querySelector('.popup_overlay_services').style.display = 'none';
+});
