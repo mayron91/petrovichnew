@@ -369,35 +369,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header_desk .header_desk_wrapper');
-    if (window.scrollY > 10) { // Если прокрутили больше 10px
-        header.classList.add('scrolled');
+   window.addEventListener('scroll', function() {
+    const headerWrapper = document.querySelector('.header_desk_wrapper');
+    const headerDesk = document.querySelector('.header_desk');
+    
+    if (window.scrollY > 10) {
+        // Добавляем классы обоим элементам
+        headerWrapper.classList.add('scrolled');
+        headerDesk.classList.add('scrolled');
+        
+        // Компенсируем изменение высоты
+        document.body.style.paddingTop = (headerWrapper.offsetHeight) + 'px';
     } else {
-        header.classList.remove('scrolled');
+        // Убираем классы
+        headerWrapper.classList.remove('scrolled');
+        headerDesk.classList.remove('scrolled');
+        
+        // Возвращаем отступ
+        document.body.style.paddingTop = '0';
     }
 });
 
-function truncateToFirstWord(element) {
-  const text = element.textContent.trim();
-  const firstWord = text.split(/\s+/)[0]; // Берём первое слово
-  element.textContent = firstWord;
-}
-
-function checkOverflowAndTruncate(block) {
-  // Проверяем, что экран меньше 768px И текст не помещается
-  if (window.innerWidth < 768 && block.scrollWidth > block.clientWidth) {
-    truncateToFirstWord(block);
-  }
-}
-
-// Пример использования
-const block = document.querySelector('.banner_btn_write');
-checkOverflowAndTruncate(block);
-
-// Добавляем обработчик ресайза (если нужно динамически проверять)
-window.addEventListener('resize', () => {
-  checkOverflowAndTruncate(block);
+// Инициализация при загрузке
+document.addEventListener('DOMContentLoaded', function() {
+    // Устанавливаем начальный padding для body
+    const headerWrapper = document.querySelector('.header_desk_wrapper');
+    document.body.style.paddingTop = (headerWrapper.offsetHeight + 20) + 'px';
 });
 
 
