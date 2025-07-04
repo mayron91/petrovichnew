@@ -135,7 +135,7 @@ a {
     background: url('../img/main/banner_mob.jpg') no-repeat;
     background-size: cover;
     aspect-ratio: 16 / 9.6;
-    margin-top: 64PX;
+    margin-top: 10PX;
 }
 
 .banner_wr {
@@ -1656,13 +1656,15 @@ a {
 }
 .news_images_wr {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .news_images_wr img {
-    width: 35%;
+    width: 100%;
+    margin: 0;
+    padding: 20PX;
 }
 .news_images_wr p {
-    width: 65%;
+    width: 100%;
 }
 .news-popup-button:hover {
     background-color: #1e3f6f;
@@ -1773,6 +1775,10 @@ a {
         padding: 10PX 40PX;
         font-size: 16PX;
     }
+    .news_images_wr {
+    display: flex;
+    flex-direction: row;
+}
 }
 
 @media (min-width: 1025px) {
@@ -1867,11 +1873,15 @@ a {
         width: 100%;
         max-width: 1130PX;
     }
+    .news_images_wr {
+    display: flex;
+    flex-direction: row;
+}
 }
 
 /*video*/
 .video {
-    margin-top: 64PX;
+    margin-top: 15PX;
     color: #fff;
 }
 
@@ -1910,6 +1920,10 @@ a {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    .video {
+    margin-top: 64PX;
+    color: #fff;
+}
     .video_wr {
         margin-bottom: 44PX;
     }
@@ -1932,6 +1946,10 @@ a {
 }
 
 @media (min-width: 1025px) {
+    .video {
+    margin-top: 64PX;
+    color: #fff;
+}
     .video_wr {
         margin-bottom: 105PX;
     }
@@ -2462,7 +2480,7 @@ a {
         grid-template-columns: repeat(auto-fill, minmax(152PX, 320PX));
         justify-content: center;
         margin-top: 60PX;
-        gap: 20PX;
+        gap: 10PX;
     }
 
     .team_card img {
@@ -2608,7 +2626,7 @@ a {
 }
 
 .partners_banner_back {
-    margin-top: 45PX;
+    margin-top: -5PX;
     width: 100%;
     min-height: 134PX;
     aspect-ratio: 16/9;
@@ -3166,7 +3184,7 @@ input[type="file"] {
 }
 
 .vacancy_accordeon {
-    min-height: 745PX;
+    min-height: 690PX;
     background: linear-gradient(180deg, rgba(156, 31, 135, 0.60) 0%, #51256A 0%, #1B2A55 100%);
 }
 
@@ -3177,7 +3195,7 @@ input[type="file"] {
 }
 
 .vacancy_accordeon_wr {
-    padding: 90px 0 0 20px;
+    padding: 40PX 0 0 20PX;
 }
 
 .vacancy_accordeon_wr h2 {
@@ -3219,7 +3237,7 @@ input[type="file"] {
 
 .garant {
     background-color: #fff;
-    padding-bottom: 15PX;
+    padding-bottom: 40PX;
 }
 
 .garant_wr {
@@ -3266,6 +3284,7 @@ input[type="file"] {
         font-size: 20PX;
         margin: 60PX 0 0 7PX;
         width: 80%;
+        padding-top: 50PX;
     }
 
     .vacancy_accordeon_wr h1 {
@@ -3484,7 +3503,7 @@ padding: 0 !important;
         font-size: 28PX;
         width: 780PX;
         margin: 114PX 0 0 -14PX;
-
+padding-top: 50PX
     }
 
     .vacancy_accordeon_wr h1 {
@@ -3636,7 +3655,7 @@ padding: 0 !important;
 }
 
 .service_block_wr {
-    padding-top: 80PX;
+    padding-top: 25PX;
 }
 
 .breadcr_wr {
@@ -3703,6 +3722,9 @@ padding: 0 !important;
 }
 
 @media (min-width: 768px) {
+    .service_block_wr {
+    padding-top: 80PX;
+}
     .service_block_link_wr {
         display: none;
     }
@@ -3736,9 +3758,34 @@ padding: 0 !important;
         padding: 0 40PX;
         font-size: 18PX;
     }
+    .service_block_link_wr {
+        display: block;
+    }
+    .dropdown-content_service {
+        display: block;
+        
+    }
+    .dropdown-content_service a {
+font-size: 14PX !important;
+min-width: 260PX;
+    }
+    .service_content_wr {
+        max-width: 50% !important;
+    }
+  
+
+    .dropdown-btn_service {
+        display: none;
+    }
+    .garant {
+        padding-bottom: 15PX;
+    }
 }
 
 @media (min-width: 1025px) {
+    .service_block_wr {
+    padding-top: 80PX;
+}
         .breadcr_wr {
         margin: 57PX 0 0 9PX;
     }
@@ -3761,5 +3808,34 @@ padding: 0 !important;
     .service_content_wr li {
         font-size: 26PX;
                 padding: 0 22PX;
+    }
+    .service_block_link_wr {
+        display: block;
+    }
+    .dropdown-content_service {
+        display: block;
+        
+    }
+    .dropdown-content_service a {
+font-size: 20PX !important;
+min-width: 320PX;
+    }
+    .service_content_wr p {
+        max-width: 890PX;
+        width: 70%;
+    }
+    .service_content_wr li {
+        max-width: 890PX;
+        width: 70%;
+    } 
+    .dropdown-btn_service {
+        display: none;
+    }
+    .service_content_wr {
+        width: 60%;
+        max-width: 800PX !important;
+    }
+    .garant {
+        padding-bottom: 40PX;
     }
 }
