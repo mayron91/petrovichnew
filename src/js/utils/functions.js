@@ -369,32 +369,36 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-   window.addEventListener('scroll', function() {
+ // Функция для обновления состояния шапки
+function updateHeaderState() {
     const headerWrapper = document.querySelector('.header_desk_wrapper');
     const headerDesk = document.querySelector('.header_desk');
+    const isScrolled = window.scrollY > 10;
     
-    if (window.scrollY > 10) {
-        // Добавляем классы обоим элементам
-        headerWrapper.classList.add('scrolled');
-        headerDesk.classList.add('scrolled');
-        
-        // Компенсируем изменение высоты
-        document.body.style.paddingTop = (headerWrapper.offsetHeight) + 'px';
-    } else {
-        // Убираем классы
-        headerWrapper.classList.remove('scrolled');
-        headerDesk.classList.remove('scrolled');
-        
-        // Возвращаем отступ
-        document.body.style.paddingTop = '0';
-    }
-});
+    // Обновляем классы
+    headerWrapper.classList.toggle('scrolled', isScrolled);
+    headerDesk.classList.toggle('scrolled', isScrolled);
+    
+    // Обновляем отступ
+    document.body.style.paddingTop = isScrolled 
+        ? headerWrapper.offsetHeight + 'px' 
+        : headerWrapper.offsetHeight + 'px'; // Одинаковый расчёт для обоих состояний
+}
 
 // Инициализация при загрузке
 document.addEventListener('DOMContentLoaded', function() {
-    // Устанавливаем начальный padding для body
+    // Устанавливаем начальный отступ сразу после построения DOM
     const headerWrapper = document.querySelector('.header_desk_wrapper');
-    document.body.style.paddingTop = (headerWrapper.offsetHeight + 20) + 'px';
+    document.body.style.paddingTop = headerWrapper.offsetHeight + 'px';
+    
+    // Обновляем состояние шапки (на случай, если страница загрузилась со скроллом)
+    updateHeaderState();
+});
+
+// Обработка скролла с оптимизацией
+window.addEventListener('scroll', function() {
+    // Используем requestAnimationFrame для плавности
+    requestAnimationFrame(updateHeaderState);
 });
 
 

@@ -135,7 +135,7 @@ a {
     background: url('../img/main/banner_mob.jpg') no-repeat;
     background-size: cover;
     aspect-ratio: 16 / 9.6;
-    margin-top: 10PX;
+    margin-top: 65PX;
 }
 
 .banner_wr {
@@ -451,7 +451,17 @@ a {
         margin-left: -25px;
     }
 }
-
+@media (min-width: 1500px) {
+    .banner {
+        height: 95vh;
+    }
+    .banner_position {
+        padding-top: 258PX;
+    }
+        .banner_btn_wr {
+        top: 224%;
+    }
+}
 /*services*/
 .services h2 {
     width: 100%;
@@ -1881,7 +1891,7 @@ a {
 
 /*video*/
 .video {
-    margin-top: 15PX;
+    margin-top: 64PX;
     color: #fff;
 }
 
@@ -1956,18 +1966,28 @@ a {
 
     .video_wr h2 {
         font-size: 32PX;
-        padding: 144PX 0 0 60PX;
+        padding: 144PX 0 25PX 60PX;
+        max-width: 1440PX;
+        margin: 0 auto;
     }
 
     .video_wr h3 {
         font-size: 26PX;
-        padding: 0PX 0 0 60PX;
+        padding: 0PX 0 50PX 60PX;
         max-width: 100%;
+        max-width: 1440PX;
+        margin: 0 auto;
     }
 
     .video_wr p {
-        padding: 20PX 60PX;
+        padding: 45PX 40PX 22PX 60PX;
         font-size: 26PX;
+        max-width: 1440PX;
+        margin: 0 auto;
+    }
+    .video_container {
+        max-width: 1440PX;
+        margin: 0 auto;
     }
 }
 
@@ -2626,7 +2646,7 @@ a {
 }
 
 .partners_banner_back {
-    margin-top: -5PX;
+    margin-top: 0PX;
     width: 100%;
     min-height: 134PX;
     aspect-ratio: 16/9;
@@ -3195,7 +3215,7 @@ input[type="file"] {
 }
 
 .vacancy_accordeon_wr {
-    padding: 40PX 0 0 20PX;
+    padding: 65PX 0 0 20PX;
 }
 
 .vacancy_accordeon_wr h2 {
@@ -3597,6 +3617,14 @@ padding-top: 50PX
         width: 540PX !important;
     }
 }
+@media (min-width: 1900px) {
+    .partners_banner_back {
+        height: 80vh;
+    }
+    .partners_banner_wr h1 {
+        margin: 0PX 0 0 380PX;
+    }
+}
 /*service*/
 .dropdown_service {
     position: relative;
@@ -3655,7 +3683,8 @@ padding-top: 50PX
 }
 
 .service_block_wr {
-    padding-top: 25PX;
+    margin-top: 64PX;
+    padding-top: 64PX;
 }
 
 .breadcr_wr {
